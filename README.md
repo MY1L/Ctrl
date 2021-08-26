@@ -23,7 +23,8 @@ Ctrl（control，寓意尺规作图）系列包含几个风格不同的字族。
 ![Ordn.gif](res/Ordn.gif)
 
 用于序数（ordinal，OpenType序数特性）及竖排全角用的可变字体。
-- 字形是比较胖的超椭圆风格。出于混排考虑，度量、字重均与雅黑的汉字相当，实例对应雅黑的字重（常规、粗体）可[查表](https://github.com/MY1L/Ctrl/blob/main/abbr.md)。
+- 字形是比较胖的超椭圆风格。可见Ｂ站专栏：[CtrlOrdn：超椭圆风竖排用可变字体，及ꓡꓲ-ꓢꓴ老傈僳文](https://www.bilibili.com/read/cv12807979)
+- 出于混排考虑，度量、字重均与雅黑的汉字相当，实例对应雅黑的字重（常规、粗体）可[查表](https://github.com/MY1L/Ctrl/blob/main/abbr.md)。
 - 有`１０`连字（需开启OT特性`ordn`），该连字与单个全角数字等宽，用于排行榜等。
 - 支持这些OT特性：`aalt` `calt` `case` `ccmp` `fwid` `kern` `liga` `mark` `ordn` `pnum` `pwid` `salt` `ss01` `tnum` `vert` `zero`（注：由于默认斜杠〇，开启`zero`反而去除斜杠），支持变体选择符。
 - 有字重和字宽2个轴。为方便不支持可变字体的软件，也做了通常的字体族实例。
@@ -36,9 +37,21 @@ Ctrl（control，寓意尺规作图）系列包含几个风格不同的字族。
 不打算支持的特性：
 - `hwid`该字体风格不适合半角；`twid`⅓em宽、`qwid`¼em宽更不可能了。
 - `onum`该字体风格不适合Oldstyle数字。
-- `smcp` `pcap`设计上几乎已经是small-caps＼petite caps，除了'p'、'q';`c2pc` `c2sc` `c2sc`也会导致无法区分大小写。
+- `smcp` `pcap`设计上几乎已经是small-caps＼petite caps，除了'p'、'q'
+- `c2pc` `c2sc` 同上，也会导致无法区分大小写。
 - `titl`基本已经是按titling-caps设计。
 - `unic`大型小写？
+
+## Runr
+![Runr.png](res/Runr.png)
+
+名称取自[ISO 15924](https://github.com/MY1L/Unicode/tree/main/abbr)里卢恩(Runic)的四字代码。
+- 出于更美观的无衬线体如尼\卢恩文字需求。可见ᛒ站专栏：[CtrlRunr：蓝牙ᚼᛒ・卢恩符文・魔戒文字黑体试作](https://www.bilibili.com/read/cv12886437)
+- 出于混排考虑，度量、字重均与雅黑常规相当。包含ᚼᚾᚿᛁᛅᛆᛒᛖᛗᛡᛥ等字。
+- 有`ᚼᛒ`蓝牙图标连字（需支持OT特性`ccmp`，浏览器应该默认开启）
+- 测试性地包含奇尔斯(Cirth)“CIRTH LETTER UI”	𖀮U+1602E（csurU+E0AE）
+
+未来计划：如果有人对完全版Runr有需要，请告诉我！
 
 ## Tang
 名称取自[ISO 15924](https://github.com/MY1L/Unicode/tree/main/abbr)里西夏文(Tangut)的四字代码。
