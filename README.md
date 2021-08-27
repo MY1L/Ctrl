@@ -46,15 +46,15 @@ Ctrl（control，寓意尺规作图）系列包含几个风格不同的字族。
 ![Runr.png](res/Runr.png)
 
 名称取自[ISO 15924](https://github.com/MY1L/Unicode/tree/main/abbr)里卢恩(Runic)的四字代码。
-- 出于更美观的无衬线体如尼\卢恩文字需求。可见ᛒ站专栏：[CtrlRunr：蓝牙ᚼᛒ・卢恩符文・魔戒文字黑体试作](https://www.bilibili.com/read/cv12886437)
-- 出于混排考虑，度量、字重均与雅黑常规相当。包含ᚼᚾᚿᛁᛅᛆᛒᛖᛗᛡᛥ等字。
+- 出于更美观的如尼\卢恩文字无衬线体需求而作。可见ᛒ站专栏：[CtrlRunr：蓝牙ᚼᛒ・卢恩符文・魔戒文字黑体试作](https://www.bilibili.com/read/cv12887381)
+- 出于混排考虑，度量、字重均与雅黑常规相当。包含许多卢恩符文(60+)、魔戒奇尔斯(80+)——因字形雷同，可合并复用以节省文件体积。
 - 有`ᚼᛒ`蓝牙图标连字（需支持OT特性`ccmp`，浏览器应该默认开启）
-- 测试性地包含奇尔斯(Cirth)“CIRTH LETTER UI”	𖀮U+1602E（csurU+E0AE）
+- 试验性支持奇尔斯(Cirth)统一码和CSUR码双重显示，例如“CIRTH LETTER UI”	𖀮U+1602E（csurU+E0AE），但请注意目前客观上魔戒编码还是**不确定**的，极有可能会变化！
 
-未来计划：如果有人对完全版Runr有需要，请告诉我！
+未来计划：如果有人对完全版「Runr」有需要，请告诉我～
 
 ## Tang
-名称取自[ISO 15924](https://github.com/MY1L/Unicode/tree/main/abbr)里西夏文(Tangut)的四字代码。
+名称取自[ISO 15924](https://github.com/MY1L/Unicode/tree/main/abbr)里西夏(Tangut)的四字代码。
 - 这是个设计为与雅黑等系统字体风格搭配的原创西夏文黑体，字形原公开在我的字体[MonuLast](https://github.com/MY1L/Unicode)中，现分离出来，添加字符（𗄴𗼇𘠈𘠐𘢌𘤩𘴀等）并修正。
 - 因为缺乏时间人手的关系，该字体为协作形式，字体文件中的笔画已拆分方便大家参与制作，且有做可变偏旁的计划，欢迎相关文字爱好者来群聊~
 
