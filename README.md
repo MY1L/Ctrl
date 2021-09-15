@@ -16,6 +16,13 @@ Ctrl（control，寓意尺规作图）系列包含几个风格不同的字族。
 
 未来计划：做成字重和字宽可变。添加苏州码子等数字字符、SMP平面的字符（以DIN的风格呈现），和一些Dingbats。
 
+## Latf
+名称取自[ISO 15924](https://github.com/MY1L/Unicode/tree/main/abbr)里拉丁德文尖角体(Latin (Fraktur variant))的四字代码。
+- 无衬线风格的𝔉𝔯𝔞𝔨𝔱𝔲𝔯.
+- 出于数学字母数字符号区段的兼用考虑。
+
+未来计划：做成字重可变。
+
 ## [Mono](https://github.com/MY1L/Ctrl/blob/main/abbr.md)
 未来计划：[Ding](#ding)改为编程用等宽形式。考虑实用性，可能只做一般代码编辑器会用到的 常规、粗体、意大利体。为了与系统中文字体搭配，只有半角或半角倍数的宽度。
 
@@ -58,12 +65,21 @@ Ctrl（control，寓意尺规作图）系列包含几个风格不同的字族。
 ## Tang
 名称取自[ISO 15924](https://github.com/MY1L/Unicode/tree/main/abbr)里西夏(Tangut)的四字代码。
 - 这是个设计为与雅黑等系统字体风格搭配的原创西夏文黑体，字形原公开在我的字体[MonuLast](https://github.com/MY1L/Unicode)中，现分离出来，添加字符（𗄴𗼇𘠈𘠐𘢌𘤩𘴀等）并修正。
-- 因为缺乏时间人手的关系，该字体为协作形式，字体文件中的笔画已拆分方便大家参与制作，且有做可变偏旁的计划，欢迎相关文字爱好者来群聊~
+- 因为缺乏时间人手的关系，该字体为协作形式，字体文件中的笔画已拆分方便大家参与制作，且有做可变偏旁的计划，欢迎相关文字爱好者来Q群聊：`879413445`
+
+## Zsye
+名称取自[ISO 15924](https://github.com/MY1L/Unicode/tree/main/abbr)里绘文字(Symbols (Emoji variant))的四字代码。
+- 彩色字体，为了更美观地显示绘文字而作。可见🅱️站专栏：[自制彩色字体Zsye发布・绘文字的隐藏技](https://www.bilibili.com/read/cv11706229)
+- 曾用名“Monu Zsye”，考虑到该字体完全原创，与其它Monu系列不同，迁为Ctrl系列。
+- [在线预览和测试Zsye](https://my1l.github.io/wwwoff/)
+
+**字体下载暂时放在[Monu/Releases](https://github.com/MY1L/QuQi/releases)**
+
+未来计划：拆分旗帜绘文字为新字体“Flag”，考虑做旗帜工程量过大，应该会借用他人资源难以完全原创，将不属于Ctrl系列。
 
 ## ????
 - Ding是窄体，Ordn是中到宽体，也许需要制作字宽介乎两者之间适合系统用的字体……
 - 甲骨文（Orcl，暂用甲骨文公司的纳斯达克股票代码缩写）或其它古文黑体，即[MonuHani](https://github.com/MY1L/Unicode/releases)的完全原创部分。
 - 藏文黑体，Zang（行政区缩写）＼Tibt（ISO 15924里藏文(Tibetan)的四字代码）
-- 无衬线风格的𝔉𝔯𝔞𝔨𝔱𝔲𝔯。
 - 某衬线风格的女书。
 - ……
