@@ -3,33 +3,38 @@
 <head>
 <meta charset="UTF-8"/>
 <meta name="author" content="MYIL"/>
-<title>Ctrl Astr 2.5</title>
+<title>Ctrl Astr 3</title>
 <link rel="shortcut icon" href="res/favicon.png" type="image/png"/>
 <style>
 @font-face{font-family:"Astr";src:url("res/CtrlAstr.woff2")}
 
-body{color:#602;font-family:Monu,'Microsoft YaHei UI',sans-serif;font-size:100%;width:96%}
+body{color:#602;font-family:Monu,'Microsoft YaHei UI',sans-serif;font-size:100%;text-align:center;width:96%}
 
-h1,p{margin:.3em 0 .6em;font-family:Astr,sans-serif;font-size:1.5em;text-align:center}
+*[title]:after{content:attr(title);font-size:.9rem;color:#FFF;background:#0199;border-radius:.2em;padding:.2ex .5ch;position:absolute;visibility:hidden;z-index:1}
+*[title]:hover:after{visibility:visible}
+
+h1,p{margin:.3em 0 .6em;font-family:Astr,sans-serif;font-size:1.5em}
 h1{color:#019;margin:.6em;font-weight:normal;font-size:2.6em}
 
 h2{font-family:Astr,sans-serif;font-size:1.5em;font-weight:normal;margin:1.5em 0 .2em}
 h2:before{color:#08F0;content:"*";position:relative;transition:.5s}h2:hover:before{color:#08F}
 
-table{border-spacing:0;border:solid 1px #CCC;background:#FFF;text-align:center}
+@keyframes wave{from{background-position:0 100%}to{background-position:-2em 100%}}
+span{color:#0396;animation:wave 2s infinite linear;
+	background:linear-gradient(45deg,#0399 25%,#9502 25%,#9500 70%,#0399 70%) repeat-x;background-size:.5em .1em}
+span:after{background:#9999!important}
 
-pre,th{color:#019;font-family:Astr;font-size:2.5em;font-weight:normal;border:solid 1px #CCC;padding:.2em .3em;
+table{border-spacing:0;border:solid 1px #CCC;background:#FFF}
+
+#writ,th{color:#019;font-family:Astr;font-size:2.5em;font-weight:normal;border:solid 1px #CCC;padding:.2em .3em;
 font-variation-settings: 'wdth' var(--wdth);
 	background:#07F3;background:
 	linear-gradient(45deg,#EEE 25%,#0000 25%,#0000 75%,#EEE 75%,#EEE),
 	linear-gradient(45deg,#EEE 25%,#0000 25%,#0000 75%,#EEE 75%,#EEE);
 	background-size:.4em .4em;background-position:0 0,.2em .2em}
-pre{color:#602;font-size:3em;border-radius:.1em;margin:.1em;text-align:center}
-pre:hover{color:#019;border:solid 2px #0199;animation:wave 1s infinite linear;
+#writ{color:#602;font-size:3em;border-radius:.1em;margin:.1em;text-orientation:upright}
+#writ:hover{color:#019;border:solid 2px #0199;animation:wave 1s infinite linear;
 	background:linear-gradient(45deg,#0399 25%,#0390 25%,#0390 70%,#0399 70%) repeat-x;background-size:1em .06em}
-
-*[title]:after{content:attr(title);font-size:.9rem;color:#FFF;background:#0199;border-radius:.2em;padding:.2ex .5ch;position:absolute;visibility:hidden;z-index:1}
-*[title]:hover:after{visibility:visible}
 
 td{border:solid 1px #CCC;padding:.5em 1em;white-space:nowrap}
 td[title]:after{margin:-3em}
@@ -38,52 +43,56 @@ td[title]:after{margin:-3em}
 	background:linear-gradient(217deg,#F071,#0000 60%),linear-gradient(127deg,#07F1,#0000 60%),linear-gradient(336deg,#FFE,#FFF 60%)}
 .my1l:after{background:#F079}
 
-@keyframes wave{from{background-position:0 100%}to{background-position:-2em 100%}}
-span{color:#0396;animation:wave 2s infinite linear;
-	background:linear-gradient(45deg,#0399 25%,#9502 25%,#9500 70%,#0399 70%) repeat-x;background-size:.5em .1em}
-
 .ts{color:#620;background:#FFB;
 	background:repeating-linear-gradient(45deg,#FFA,#FFF .05em,#FFF .2em,#FFA .3em)}
 
-.mose{font-size:0;width:1%}
+.hid{font-size:0;width:1%}
 
 .resv{color:#FFF;background:#CCC}
 
 </style>
 
 <script type="text/javascript">
-const changeWidth = function (e) {
-	html.style.setProperty("--wdth", e.target.value);
-}
+const changeWdth = function (e) {
+	html.style.setProperty("--wdth", e.target.value);}
 
 const changeBlur = function (e) {
 	const v = e.target.value
 	const blur = "blur(" + v + "px)"
-	document.querySelector('body').style.filter = blur
-}
+	document.querySelector('body').style.filter = blur}
 
 var html
 
 document.addEventListener("DOMContentLoaded", function() {
 	html = document.querySelector('html')
-	document.querySelector('#width').addEventListener('input', changeWidth)
+	document.querySelector('#wdth').addEventListener('input', changeWdth)
 	document.querySelector('#blur').addEventListener('input', changeBlur)
 });
+
+function vert() {
+writ.style.writingMode = "vertical-rl";writ.style.width = "96%";writ.style.height = "9em"}
+function horz() {
+writ.style.writingMode = "horizontal-tb";writ.style.width = "auto";writ.style.height = "auto"}
+
 </script>
 
 	</head>
 
 <body>
 
-<h1>CONTROl eXASTRIS</h1>
-<pre contenteditable="true">
-‘SEGELMICHZURSONNE’
-
+<h1>CTRL ExAStRIs</h1>
+<p contenteditable="true" id="writ">
+‘SEGELMICHZURSONNE’<br/>
+<br/>
 allindo
-</pre>
+</p>
 <p>
-	<label for="width">WDTH</label><input type="range" id="width" min="100" max="120" step="1" value="110"><label for="width">字宽</label>
-　<label for="blur">BLUR</label><input type="range" id="blur" min="0" max="3" step="0.1" value="0"><label for="blur">模糊</label>
+	<label>WDTH<input type="range" id="wdth" min="100" max="120" step="1" value="110">字宽</label>
+　<label>BLUR<input type="range" id="blur" min="0" max="3" step="0.1" value="0">朦胧</label>
+
+　<label>VERT<input type="radio" name="writ" onclick="vert()">竖排</label>
+　<label>HORZ<input type="radio" name="writ" onclick="horz()">横排</label>
+
 </p>
 
 <table><tbody><tr>
@@ -94,33 +103,33 @@ allindo
 <th style="width:100%" title="破译中">©ª«¬¯°±´µ¶·¸ <span>*</span>¿</th>
 </tr></tbody></table>
 
-<!--<p>摩斯电码测试，不准确</p>-->
-<h2>字母LATN</h2>
+<p class="hid">摩斯电码测试，不准确</p>
+<h2>字母 LATN</h2>
 <table class="bx" width="100%" cellspacing="0" cellpadding="0" border="0"><tbody>
 <tr>
-<td>字体</td><td class="ts">译文</td><td class="mose">电码</td><td>字体</td><td class="ts">译文</td><td class="mose">电码</td><td>字体</td><td class="ts">译文</td><td class="mose">电码</td><td>字体</td><td class="ts">译文</td><td class="mose">电码</td></tr>
+<td>字体</td><td class="ts">译文</td><td class="hid">电码</td><td>字体</td><td class="ts">译文</td><td class="hid">电码</td><td>字体</td><td class="ts">译文</td><td class="hid">电码</td><td>字体</td><td class="ts">译文</td><td class="hid">电码</td></tr>
 <tr>
-<th title="确信" class="my1l">Aa</th><td class="ts">Aa</td><td class="mose">· ‒</td><th title="可疑">Bb</th><td class="ts">Bb</td><td class="mose">‒ · · ·</td><th>C<span>c</span></th><td class="ts">Cc</td><td class="mose">‒ · ‒ ·</td><th class="my1l">Dd</th><td class="ts">Dd</td><td class="mose">‒ · ·</td></tr>
+<th title="确信" class="my1l">Aa</th><td class="ts">Aa</td><td class="hid">· ‒</td><th title="可疑">Bb</th><td class="ts">Bb</td><td class="hid">‒ · · ·</td><th>C<span title="假设">c</span></th><td class="ts">Cc</td><td class="hid">‒ · ‒ ·</td><th class="my1l">Dd</th><td class="ts">Dd</td><td class="hid">‒ · ·</td></tr>
 <tr>
-<th>Ee</th><td class="ts">Ee</td><td class="mose">·</td><th>F<span>f</span></th><td class="ts">Ff</td><td class="mose">· · ‒ ·</td><th>Gg</th><td class="ts">Gg</td><td class="mose">‒ ‒ ·</td><th>Hh</th><td class="ts">Hh</td><td class="mose">· · · ·</td></tr>
+<th>Ee</th><td class="ts">Ee</td><td class="hid">·</td><th>F<span>f</span></th><td class="ts">Ff</td><td class="hid">· · ‒ ·</td><th>Gg</th><td class="ts">Gg</td><td class="hid">‒ ‒ ·</td><th>Hh</th><td class="ts">Hh</td><td class="hid">· · · ·</td></tr>
 <tr>
-<th class="my1l">Ii</th><td class="ts">Ii</td><td class="mose">· ·</td><th title="瞎编"><span>J</span>j</th><td class="ts">Jj</td><td class="mose">· ‒ ‒ ‒</td><th>Kk</th><td class="ts">Kk</td><td class="mose">‒ · ‒</td><th class="my1l">Ll</th><td class="ts">Ll</td><td class="mose">· ‒ · ·</td></tr>
+<th class="my1l">Ii</th><td class="ts">Ii</td><td class="hid">· ·</td><th><span>J</span>j</th><td class="ts">Jj</td><td class="hid">· ‒ ‒ ‒</td><th>Kk</th><td class="ts">Kk</td><td class="hid">‒ · ‒</td><th class="my1l">Ll</th><td class="ts">Ll</td><td class="hid">· ‒ · ·</td></tr>
 <tr>
-<th>Mm</th><td class="ts">Mm</td><td class="mose">‒ ‒</td><th class="my1l">Nn</th><td class="ts">Nn</td><td class="mose">‒ ·</td><th class="my1l">Oo</th><td class="ts">Oo</td><td class="mose">‒ ‒ ‒</td><th>Pp</th><td class="ts">Pp</td><td class="mose">· ‒ ‒ ·</td></tr>
+<th>Mm</th><td class="ts">Mm</td><td class="hid">‒ ‒</td><th class="my1l">Nn</th><td class="ts">Nn</td><td class="hid">‒ ·</td><th class="my1l">Oo</th><td class="ts">Oo</td><td class="hid">‒ ‒ ‒</td><th>Pp</th><td class="ts">Pp</td><td class="hid">· ‒ ‒ ·</td></tr>
 <tr>
-<th>Qq</th><td class="ts">Qq</td><td class="mose">‒ ‒ · ‒</td><th>Rr</th><td class="ts">Rr</td><td class="mose">· ‒ ·</td><th>Ss</th><td class="ts">Ss</td><td class="mose">· · ·</td><th>Tt</th><td class="ts">Tt</td><td class="mose">‒</td></tr>
+<th>Qq</th><td class="ts">Qq</td><td class="hid">‒ ‒ · ‒</td><th>Rr</th><td class="ts">Rr</td><td class="hid">· ‒ ·</td><th>Ss</th><td class="ts">Ss</td><td class="hid">· · ·</td><th>Tt</th><td class="ts">Tt</td><td class="hid">‒</td></tr>
 <tr>
-<th>Uu</th><td class="ts">Uu</td><td class="mose">· · ‒</td><th>Vv</th><td class="ts">Vv</td><td class="mose">· · · ‒</td><th>W<span>w</span></th><td class="ts">Ww</td><td class="mose">· ‒ ‒</td><th>Xx</th><td class="ts">Xx</td><td class="mose">‒ · · ‒</td></tr>
+<th>Uu</th><td class="ts">Uu</td><td class="hid">· · ‒</td><th>Vv</th><td class="ts">Vv</td><td class="hid">· · · ‒</td><th>W<span>w</span></th><td class="ts">Ww</td><td class="hid">· ‒ ‒</td><th>Xx</th><td class="ts">Xx</td><td class="hid">‒ · · ‒</td></tr>
 <tr>
-<th>Y<span>y</span></th><td class="ts">Yy</td><td class="mose">‒ · ‒ ‒</td><th>Z<span>z</span></th><td class="ts">Zz</td><td class="mose">‒ ‒ · ·</td><td colspan="6" class="resv">⋯</td></tr>
+<th>Y<span>y</span></th><td class="ts">Yy</td><td class="hid">‒ · ‒ ‒</td><th>Z<span>z</span></th><td class="ts">Zz</td><td class="hid">‒ ‒ · ·</td><td colspan="6" class="resv">⋯</td></tr>
 </tbody></table>
-<h2>数字NUM</h2>
+<h2>数字 NUM</h2>
 <table class="bx" width="100%" cellspacing="0" cellpadding="0" border="0"><tbody>
 <tr>
-<td>字体</td><td class="ts">译文</td><td class="mose">电码</td><td>字体</td><td class="ts">译文</td><td class="mose">电码</td><td>字体</td><td class="ts">译文</td><td class="mose">电码</td><td>字体</td><td class="ts">译文</td><td class="mose">电码</td></tr>
-<tr><th><span>0</span></th><td class="ts">0</td><td class="mose">‒ ‒ ‒ ‒ ‒</td><th>1</th><td class="ts">1</td><td class="mose">· ‒ ‒ ‒ ‒</td><th>2</th><td class="ts">2</td><td class="mose">· · ‒ ‒ ‒</td><th>3</th><td class="ts">3</td><td class="mose">· · · ‒ ‒</td></tr>
-<tr><th>4</th><td class="ts">4</td><td class="mose">· · · · ‒</td><th>5</th><td class="ts">5</td><td class="mose">· · · · ·</td><th><span>6</span></th><td class="ts">6</td><td class="mose">‒ · · · ·</td><th><span>7</span></th><td class="ts">7</td><td class="mose">‒ ‒ · · ·</td></tr>
-<tr><th><span>8</span></th><td class="ts">8</td><td class="mose">‒ ‒ ‒ · ·</td><th><span>9</span></th><td class="ts">9</td><td class="mose">‒ ‒ ‒ ‒ ·</td><td colspan="6" class="resv">⋯</td></tr>
+<td>字体</td><td class="ts">译文</td><td class="hid">电码</td><td>字体</td><td class="ts">译文</td><td class="hid">电码</td><td>字体</td><td class="ts">译文</td><td class="hid">电码</td><td>字体</td><td class="ts">译文</td><td class="hid">电码</td></tr>
+<tr><th><span title="可疑">0</span></th><td class="ts">0</td><td class="hid">‒ ‒ ‒ ‒ ‒</td><th title="存在">1</th><td class="ts">1</td><td class="hid">· ‒ ‒ ‒ ‒</td><th>2</th><td class="ts">2</td><td class="hid">· · ‒ ‒ ‒</td><th>3</th><td class="ts">3</td><td class="hid">· · · ‒ ‒</td></tr>
+<tr><th>4</th><td class="ts">4</td><td class="hid">· · · · ‒</td><th>5</th><td class="ts">5</td><td class="hid">· · · · ·</td><th><span>6</span></th><td class="ts">6</td><td class="hid">‒ · · · ·</td><th><span>7</span></th><td class="ts">7</td><td class="hid">‒ ‒ · · ·</td></tr>
+<tr><th><span>8</span></th><td class="ts">8</td><td class="hid">‒ ‒ ‒ · ·</td><th><span>9</span></th><td class="ts">9</td><td class="hid">‒ ‒ ‒ ‒ ·</td><td colspan="6" class="resv">⋯</td></tr>
 </tbody></table>
 
 <hr/>
