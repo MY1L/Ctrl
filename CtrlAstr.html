@@ -2,53 +2,60 @@
 <html lang="zh">
 <head>
 <meta charset="UTF-8"/>
-<meta name="author" content="MYIL"/>
-<title>Ctrl Astr 3.01</title>
+<meta name="author" content="綿雲飴里"/>
+<title>Ctrl Astr 3.10</title>
 <link rel="shortcut icon" href="res/favicon.png" type="image/png"/>
 <style>
 @font-face{font-family:"Astr";src:url("res/CtrlAstr.woff2")}
 
-body{color:#602;font-family:Monu,'Microsoft YaHei UI',sans-serif;font-size:100%;text-align:center;width:96%}
+body{color:#06C;font-family:Monu,'Microsoft YaHei UI',sans-serif;font-size:100%;text-align:center;width:96%}
 
-*[title]:after{content:attr(title);font-size:.9rem;color:#FFF;background:#0199;border-radius:.2em;padding:.2ex .5ch;position:absolute;visibility:hidden;z-index:1}
+*[title]:after{content:attr(title);font-size:.9rem;color:#FFF;border-radius:.2em;padding:.2ex .5ch;position:absolute;visibility:hidden;z-index:1}
 *[title]:hover:after{visibility:visible}
 
-h1,p{margin:.3em 0 .6em;font-family:Astr,sans-serif;font-size:1.5em}
-h1{color:#019;margin:.6em;font-weight:normal;font-size:2.6em}
+p,h1{margin:.3em 0 .6em;font-family:Astr,sans-serif;font-size:1.5em}
+h1{color:#447;margin:.6em;font-weight:normal;font-size:2.6em}
 
 h2{font-family:Astr,sans-serif;font-size:1.5em;font-weight:normal;margin:1.5em 0 .2em}
-h2:before{color:#08F0;content:"*";position:relative;transition:.5s}h2:hover:before{color:#08F}
+h2:before{color:#BCC0;content:"*";position:relative;transition:.8s}
+h2:hover:before{color:#BCC}
 
 @keyframes wave{from{background-position:0 100%}to{background-position:-2em 100%}}
-span{color:#0396;animation:wave 2s infinite linear;
-	background:linear-gradient(45deg,#0399 25%,#9502 25%,#9500 70%,#0399 70%) repeat-x;background-size:.5em .1em}
-span:after{background:#9999!important}
+span{color:#4476;border-radius:.1em;animation:wave 2s infinite linear;
+	background:linear-gradient(45deg,#AAC 25%,#AAC5 25%,#AAC5 70%,#AAC 70%) repeat-x;background-size:.5em .1em}
+span:after{background:#9999}
+
+a{color:#06C;border-radius:.1em;text-decoration:none;animation:wave 2s infinite linear;
+	background:linear-gradient(-45deg,#06C9 25%,#ADF5 25%,#ADF5 70%,#06C9 70%) repeat-x;background-size:1em .15em}
+a:hover{
+	background:linear-gradient(-45deg,#06C9 25%,#ADF 25%,#ADF 70%,#06C9 70%) repeat-x;background-size:1em .15em}
 
 table{border-spacing:0;border:solid 1px #CCC;background:#FFF}
 
-#writ,th{color:#019;font-family:Astr;font-size:2.5em;font-weight:normal;border:solid 1px #CCC;padding:.2em .3em;
-font-variation-settings: 'wdth' var(--wdth);
+#writ,th{color:#447;font-family:Astr;font-size:2.5em;font-weight:normal;border:solid 1px #CCC;padding:.2em .3em;
+transition:.5s;font-variation-settings: 'wdth' var(--wdth);
 	background:#07F3;background:
 	linear-gradient(45deg,#EEE 25%,#0000 25%,#0000 75%,#EEE 75%,#EEE),
 	linear-gradient(45deg,#EEE 25%,#0000 25%,#0000 75%,#EEE 75%,#EEE);
 	background-size:.4em .4em;background-position:0 0,.2em .2em}
-#writ{color:#602;font-size:3em;border-radius:.1em;margin:.1em;text-orientation:upright}
-#writ:hover{color:#019;border:solid 2px #0199;animation:wave 1s infinite linear;
-	background:linear-gradient(45deg,#0399 25%,#0390 25%,#0390 70%,#0399 70%) repeat-x;background-size:1em .06em}
+#writ{color:#06C;font-size:3em;border-radius:.1em;margin:.1em;border:solid 2px #CCC;word-break:break-all;text-orientation:upright}
+#writ:hover{color:#447;border:solid 2px #4479;animation:wave 1s infinite linear;
+	background:linear-gradient(45deg,#4479 25%,#4472 25%,#4472 70%,#4479 70%) repeat-x;background-size:1em .07em}
+th:after{background:#4479}
 
 td{border:solid 1px #CCC;padding:.5em 1em;white-space:nowrap}
 td[title]:after{margin:-3em}
 
-.my1l{color:#602;
+.my1l{color:#06C;
 	background:linear-gradient(217deg,#F071,#0000 60%),linear-gradient(127deg,#07F1,#0000 60%),linear-gradient(336deg,#FFE,#FFF 60%)}
 .my1l:after{background:#F079}
 
-.ts{color:#620;background:#FFB;
-	background:repeating-linear-gradient(45deg,#FFA,#FFF .05em,#FFF .2em,#FFA .3em)}
+.ts{color:#344;background:#FFB;
+	background:repeating-linear-gradient(45deg,#DEE,#FFF .05em,#FFF .2em,#DEE .3em)}
 
 .hid{font-size:0;width:1%}
 
-.resv{color:#FFF;background:#CCC}
+.resv{color:#FFF;background:#DDD}
 
 </style>
 
@@ -87,18 +94,18 @@ allindo
 <p>
 	<label>WDTH<input type="range" id="wdth" min="100" max="120" step="1" value="110">字宽</label>
 　<label>BLUR<input type="range" id="blur" min="0" max="3" step="0.1" value="0">朦胧</label>
-
 　<label>VERT<input type="radio" name="writ" onclick="vert()">竖排</label>
 　<label>HORZ<input type="radio" name="writ" onclick="horz()">横排</label>
-
 </p>
+
+<p><a href="https://www.bilibili.com/video/BV1DP4y1b7tq" target="_blank">视频介绍skill</a></p>
 
 <table><tbody><tr>
 <td>笔画</td>
 <th>㇀㇁㇂㇃㇄㇅㇆㇇㇈㇉㇊㇋㇌㇍㇎㇏㇐㇑㇒㇓㇔㇕㇖㇗㇘㇙㇚㇛㇜㇝㇞㇟㇠㇡㇢㇣㇤<!--㇥㇦㇧㇨-->㇩㇪㇫㇬㇭㇮㇯</th>
 </tr><tr>
 <td>未知</td>
-<th style="width:100%" title="破译中">©ª«¬¯°±´µ¶·¸ <span>*</span>¿</th>
+<th style="width:100%" title="破译中，大多不支持竖排">©ª«¯°±´µ¶·º»¼½¾ <span>*</span>¿</th>
 </tr></tbody></table>
 
 <p class="hid">摩斯电码测试，不准确</p>
@@ -117,9 +124,9 @@ allindo
 <tr>
 <th>Qq</th><td class="ts">Qq</td><td class="hid">‒ ‒ · ‒</td><th>Rr</th><td class="ts">Rr</td><td class="hid">· ‒ ·</td><th>Ss</th><td class="ts">Ss</td><td class="hid">· · ·</td><th>Tt</th><td class="ts">Tt</td><td class="hid">‒</td></tr>
 <tr>
-<th>Uu</th><td class="ts">Uu</td><td class="hid">· · ‒</td><th>Vv</th><td class="ts">Vv</td><td class="hid">· · · ‒</td><th>W<span>w</span></th><td class="ts">Ww</td><td class="hid">· ‒ ‒</td><th>Xx</th><td class="ts">Xx</td><td class="hid">‒ · · ‒</td></tr>
+<th>Uu</th><td class="ts">Uu</td><td class="hid">· · ‒</td><th>Vv</th><td class="ts">Vv</td><td class="hid">· · · ‒</td><th>Ww</th><td class="ts">Ww</td><td class="hid">· ‒ ‒</td><th>Xx</th><td class="ts">Xx</td><td class="hid">‒ · · ‒</td></tr>
 <tr>
-<th>Y<span>y</span></th><td class="ts">Yy</td><td class="hid">‒ · ‒ ‒</td><th>Z<span>z</span></th><td class="ts">Zz</td><td class="hid">‒ ‒ · ·</td><td colspan="6" class="resv">⋯</td></tr>
+<th>Yy</th><td class="ts">Yy</td><td class="hid">‒ · ‒ ‒</td><th>Z<span>z</span></th><td class="ts">Zz</td><td class="hid">‒ ‒ · ·</td><td colspan="6" class="resv">⋯</td></tr>
 </tbody></table>
 <h2>数字 NUM</h2>
 <table class="bx" width="100%" cellspacing="0" cellpadding="0" border="0"><tbody>
@@ -131,7 +138,7 @@ allindo
 </tbody></table>
 
 <hr/>
-<p><a href="https://afdian.net/@FairyFloss" target="_blank"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAKoAAACqAQMAAAAHuEbBAAAABlBMVEX///9mACLM+CUIAAAA/0lEQVR42uWWUQ7EIAhESTyAR/LqHqkHMGGHwW3j7j/zUUMbfe0HgREwe8cajnXZsrAWB1dhPI24XQObJBIMp3AKvzo2wy8tDtc83npsfS4T40ya0/5yWYop5NHSfvRdivdafbYD1OOBy+Q+nXLOowjDNV4mh4MTG/wiwiFhpGtxAxZ/aTDK7WS1MyNYKWQFZnhCy3G5I04qPEIyTBpCtU2FyeBgyvnJZTnOuptCzu8qnAwZo495xSX4KTaZwHOMqsS7CTiDFGE72lEptj06DTaB20EBzgGqUcWRtF161fhb9oQ4mwDO56xZijNpq+dA56d8SvEtZJacbzsS4DesD+htH+j+JuO2AAAAAElFTkSuQmCC"></a><br/>* BY MYIL *</p>
+<p><a href="https://afdian.net/@FairyFloss" target="_blank"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAKoAAACqAQMAAAAHuEbBAAAABlBMVEX///8paMktwjWqAAAA/0lEQVR42uWWUQ7EIAhESTyAR/LqHqkHMGGHwW3j7j/zUUMbfe0HgREwe8cajnXZsrAWB1dhPI24XQObJBIMp3AKvzo2wy8tDtc83npsfS4T40ya0/5yWYop5NHSfvRdivdafbYD1OOBy+Q+nXLOowjDNV4mh4MTG/wiwiFhpGtxAxZ/aTDK7WS1MyNYKWQFZnhCy3G5I04qPEIyTBpCtU2FyeBgyvnJZTnOuptCzu8qnAwZo495xSX4KTaZwHOMqsS7CTiDFGE72lEptj06DTaB20EBzgGqUcWRtF161fhb9oQ4mwDO56xZijNpq+dA56d8SvEtZJacbzsS4DesD+htH+j+JuO2AAAAAElFTkSuQmCC"></a><br/>* BY MYIL *</p>
 <img src="https://s01.flagcounter.com/mini/rgz5/bg_FFFFFF/txt_D1D1D1/border_FFFFFF/flags_0/" width="1">
 <img src="https://www.cutercounter.com/hits.php?id=hexkcqxk&nd=6&style=1" width="1">
 </body>
