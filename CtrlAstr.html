@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html lang="zh">
-<head>
+	<head>
 <meta charset="UTF-8"/>
 <meta name="author" content="綿雲飴里"/>
-<title>Ctrl Astr 3.10</title>
+<title>Ctrl Astr 3.12</title>
 <link rel="shortcut icon" href="res/favicon.png" type="image/png"/>
 <style>
 @font-face{font-family:"Astr";src:url("res/CtrlAstr.woff2")}
 
-body{color:#06C;font-family:Monu,'Microsoft YaHei UI',sans-serif;font-size:100%;text-align:center;width:96%}
+body{color:#06C;font-family:Monu,'Microsoft YaHei UI',sans-serif;font-size:100%;text-align:center;width:90%;margin:3em auto}
 
 *[title]:after{content:attr(title);font-size:.9rem;color:#FFF;border-radius:.2em;padding:.2ex .5ch;position:absolute;visibility:hidden;z-index:1}
 *[title]:hover:after{visibility:visible}
@@ -21,14 +21,15 @@ h2:before{color:#BCC0;content:"*";position:relative;transition:.8s}
 h2:hover:before{color:#BCC}
 
 @keyframes wave{from{background-position:0 100%}to{background-position:-2em 100%}}
+
 span{color:#4476;border-radius:.1em;animation:wave 2s infinite linear;
 	background:linear-gradient(45deg,#AAC 25%,#AAC5 25%,#AAC5 70%,#AAC 70%) repeat-x;background-size:.5em .1em}
 span:after{background:#9999}
 
 a{color:#06C;border-radius:.1em;text-decoration:none;animation:wave 2s infinite linear;
-	background:linear-gradient(-45deg,#06C9 25%,#ADF5 25%,#ADF5 70%,#06C9 70%) repeat-x;background-size:1em .15em}
+	background:linear-gradient(45deg,#06C9 25%,#ADF5 25%,#ADF5 70%,#06C9 70%) repeat-x;background-size:1em .15em}
 a:hover{
-	background:linear-gradient(-45deg,#06C9 25%,#ADF 25%,#ADF 70%,#06C9 70%) repeat-x;background-size:1em .15em}
+	background:linear-gradient(45deg,#06C9 25%,#ADF 25%,#ADF 70%,#06C9 70%) repeat-x;background-size:1em .15em}
 
 table{border-spacing:0;border:solid 1px #CCC;background:#FFF}
 
@@ -38,7 +39,7 @@ transition:.5s;font-variation-settings: 'wdth' var(--wdth);
 	linear-gradient(45deg,#EEE 25%,#0000 25%,#0000 75%,#EEE 75%,#EEE),
 	linear-gradient(45deg,#EEE 25%,#0000 25%,#0000 75%,#EEE 75%,#EEE);
 	background-size:.4em .4em;background-position:0 0,.2em .2em}
-#writ{color:#06C;font-size:3em;border-radius:.1em;margin:.1em;border:solid 2px #CCC;word-break:break-all;text-orientation:upright}
+#writ{color:#06C;font-size:3em;border-radius:.1em;margin:.1em;border:solid 2px #CCC;word-break:break-all;text-orientation:upright;width:auto;margin:auto}
 #writ:hover{color:#447;border:solid 2px #4479;animation:wave 1s infinite linear;
 	background:linear-gradient(45deg,#4479 25%,#4472 25%,#4472 70%,#4479 70%) repeat-x;background-size:1em .07em}
 th:after{background:#4479}
@@ -51,12 +52,11 @@ td[title]:after{margin:-3em}
 .my1l:after{background:#F079}
 
 .ts{color:#344;background:#FFB;
-	background:repeating-linear-gradient(45deg,#DEE,#FFF .05em,#FFF .2em,#DEE .3em)}
-
-.hid{font-size:0;width:1%}
+	background:repeating-linear-gradient(30deg,#DEE,#FFF .1em,#DEE .2em)}
 
 .resv{color:#FFF;background:#DDD}
 
+.hid{font-size:0;width:1%}
 </style>
 
 <script type="text/javascript">
@@ -77,9 +77,9 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 function vert() {
-writ.style.writingMode = "vertical-rl";writ.style.width = "96%";writ.style.height = "8em"}
+writ.style.writingMode = "vertical-rl";writ.style.height = "8em"}
 function horz() {
-writ.style.writingMode = "horizontal-tb";writ.style.width = "auto";writ.style.height = "auto"}
+writ.style.writingMode = "horizontal-tb";writ.style.height = "auto"}
 </script>
 	</head>
 
@@ -114,7 +114,7 @@ allindo
 <tr>
 <td>字体</td><td class="ts">译文</td><td class="hid">电码</td><td>字体</td><td class="ts">译文</td><td class="hid">电码</td><td>字体</td><td class="ts">译文</td><td class="hid">电码</td><td>字体</td><td class="ts">译文</td><td class="hid">电码</td></tr>
 <tr>
-<th title="确信" class="my1l">Aa</th><td class="ts">Aa</td><td class="hid">· ‒</td><th title="可疑">Bb</th><td class="ts">Bb</td><td class="hid">‒ · · ·</td><th>C<span title="假设">c</span></th><td class="ts">Cc</td><td class="hid">‒ · ‒ ·</td><th class="my1l">Dd</th><td class="ts">Dd</td><td class="hid">‒ · ·</td></tr>
+<th title="确信" class="my1l">Aa</th><td class="ts">Aa</td><td class="hid">· ‒</td><th title="存疑">Bb</th><td class="ts">Bb</td><td class="hid">‒ · · ·</td><th>C<span title="假设">c</span></th><td class="ts">Cc</td><td class="hid">‒ · ‒ ·</td><th class="my1l">Dd</th><td class="ts">Dd</td><td class="hid">‒ · ·</td></tr>
 <tr>
 <th>Ee</th><td class="ts">Ee</td><td class="hid">·</td><th>F<span>f</span></th><td class="ts">Ff</td><td class="hid">· · ‒ ·</td><th>Gg</th><td class="ts">Gg</td><td class="hid">‒ ‒ ·</td><th>Hh</th><td class="ts">Hh</td><td class="hid">· · · ·</td></tr>
 <tr>
@@ -132,7 +132,7 @@ allindo
 <table class="bx" width="100%" cellspacing="0" cellpadding="0" border="0"><tbody>
 <tr>
 <td>字体</td><td class="ts">译文</td><td class="hid">电码</td><td>字体</td><td class="ts">译文</td><td class="hid">电码</td><td>字体</td><td class="ts">译文</td><td class="hid">电码</td><td>字体</td><td class="ts">译文</td><td class="hid">电码</td></tr>
-<tr><th><span title="可疑">0</span></th><td class="ts">0</td><td class="hid">‒ ‒ ‒ ‒ ‒</td><th title="存在">1</th><td class="ts">1</td><td class="hid">· ‒ ‒ ‒ ‒</td><th>2</th><td class="ts">2</td><td class="hid">· · ‒ ‒ ‒</td><th>3</th><td class="ts">3</td><td class="hid">· · · ‒ ‒</td></tr>
+<tr><th><span title="存疑">0</span></th><td class="ts">0</td><td class="hid">‒ ‒ ‒ ‒ ‒</td><th title="可信">1</th><td class="ts">1</td><td class="hid">· ‒ ‒ ‒ ‒</td><th>2</th><td class="ts">2</td><td class="hid">· · ‒ ‒ ‒</td><th>3</th><td class="ts">3</td><td class="hid">· · · ‒ ‒</td></tr>
 <tr><th>4</th><td class="ts">4</td><td class="hid">· · · · ‒</td><th>5</th><td class="ts">5</td><td class="hid">· · · · ·</td><th><span>6</span></th><td class="ts">6</td><td class="hid">‒ · · · ·</td><th><span>7</span></th><td class="ts">7</td><td class="hid">‒ ‒ · · ·</td></tr>
 <tr><th><span>8</span></th><td class="ts">8</td><td class="hid">‒ ‒ ‒ · ·</td><th><span>9</span></th><td class="ts">9</td><td class="hid">‒ ‒ ‒ ‒ ·</td><td colspan="6" class="resv">⋯</td></tr>
 </tbody></table>
