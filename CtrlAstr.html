@@ -3,20 +3,20 @@
 	<head>
 <meta charset="UTF-8"/>
 <meta name="author" content="綿雲飴里"/>
-<title>Ctrl Astr 3.12</title>
+<title>Ctrl Astr 3.14</title>
 <link rel="shortcut icon" href="res/favicon.png" type="image/png"/>
 <style>
 @font-face{font-family:"Astr";src:url("res/CtrlAstr.woff2")}
 
-body{color:#06C;font-family:Monu,'Microsoft YaHei UI',sans-serif;font-size:100%;text-align:center;width:90%;margin:3em auto}
+body{color:#06C;font:100% Monu,'Microsoft YaHei UI',sans-serif;text-align:center;width:90%;margin:3em auto}
 
 *[title]:after{content:attr(title);font-size:.9rem;color:#FFF;border-radius:.2em;padding:.2ex .5ch;position:absolute;visibility:hidden;z-index:1}
 *[title]:hover:after{visibility:visible}
 
-p,h1{margin:.3em 0 .6em;font-family:Astr,sans-serif;font-size:1.5em}
-h1{color:#447;margin:.6em;font-weight:normal;font-size:2.6em}
+p,h1{margin:.3em 0 .6em;font:1.5em Astr,sans-serif}
+h1{color:#447;margin:.6em;font-size:2.6em}
 
-h2{font-family:Astr,sans-serif;font-size:1.5em;font-weight:normal;margin:1.5em 0 .2em}
+h2{font:400 1.5em Astr,sans-serif;margin:1.5em 0 .2em}
 h2:before{color:#BCC0;content:"*";position:relative;transition:.8s}
 h2:hover:before{color:#BCC}
 
@@ -31,7 +31,7 @@ a{color:#06C;border-radius:.1em;text-decoration:none;animation:wave 2s infinite 
 a:hover{
 	background:linear-gradient(45deg,#06C9 25%,#ADF 25%,#ADF 70%,#06C9 70%) repeat-x;background-size:1em .15em}
 
-table{border-spacing:0;border:solid 1px #CCC;background:#FFF}
+table{border-spacing:0;border:solid 1px #CCC;background:#FFF;width:100%}
 
 #writ,th{color:#447;font-family:Astr;font-size:2.5em;font-weight:normal;border:solid 1px #CCC;padding:.2em .3em;
 transition:.5s;font-variation-settings: 'wdth' var(--wdth);
@@ -56,10 +56,10 @@ td[title]:after{margin:-3em}
 
 .resv{color:#FFF;background:#DDD}
 
-.hid{font-size:0;width:1%}
+.b{font-weight:700}
 </style>
 
-<script type="text/javascript">
+<script>
 const changeWdth = function (e) {
 	html.style.setProperty("--wdth", e.target.value);}
 
@@ -92,54 +92,56 @@ writ.style.writingMode = "horizontal-tb";writ.style.height = "auto"}
 allindo
 </p>
 <p>
-	<label>WDTH<input type="range" id="wdth" min="100" max="120" step="1" value="110">字宽</label>
+<label>WDTH<input type="range" id="wdth" min="100" max="120" step="1" value="110">字宽</label>
 　<label>BLUR<input type="range" id="blur" min="0" max="3" step="0.1" value="0">朦胧</label>
 　<label>VERT<input type="radio" name="writ" onclick="vert()">竖排</label>
 　<label>HORZ<input type="radio" name="writ" onclick="horz()">横排</label>
 </p>
 
-<p><a href="https://www.bilibili.com/video/BV1DP4y1b7tq" target="_blank">视频介绍skill</a></p>
+<p>
+<a href="https://www.bilibili.com/video/BV1DP4y1b7tq" target="_blank">视频介绍・skill</a>
+　<a href="https://github.com/MY1L/Ctrl/releases" target="_blank">字体下载・Fonts</a>
+</p>
 
 <table><tbody><tr>
 <td>笔画</td>
-<th>㇀㇁㇂㇃㇄㇅㇆㇇㇈㇉㇊㇋㇌㇍㇎㇏㇐㇑㇒㇓㇔㇕㇖㇗㇘㇙㇚㇛㇜㇝㇞㇟㇠㇡㇢㇣㇤<!--㇥㇦㇧㇨-->㇩㇪㇫㇬㇭㇮㇯</th>
+<th>㇀㇁㇂㇃㇄㇅㇆㇇㇈㇉㇊㇋㇌㇍㇎㇏㇐㇑㇒㇓㇔㇕㇖㇗㇘㇙㇚㇛㇜㇝㇞㇟㇠㇡㇢㇣㇤・<!--㇥㇦㇧㇨-->㇩㇪㇫㇬㇭㇮㇯</th>
 </tr><tr>
 <td>未知</td>
-<th style="width:100%" title="破译中，大多不支持竖排">©ª«¯°±´µ¶·º»¼½¾ <span>*</span>¿</th>
+<th title="破译中，大多不支持竖排">©ª«¯°±´µ¶·º»¼½¾ <span>*</span>¿</th>
 </tr></tbody></table>
 
-<p class="hid">摩斯电码测试，不准确</p>
-<h2>字母 LATN</h2>
-<table class="bx" width="100%" cellspacing="0" cellpadding="0" border="0"><tbody>
+<h2>字母・LATN</h2>
+<table><tbody>
 <tr>
-<td>字体</td><td class="ts">译文</td><td class="hid">电码</td><td>字体</td><td class="ts">译文</td><td class="hid">电码</td><td>字体</td><td class="ts">译文</td><td class="hid">电码</td><td>字体</td><td class="ts">译文</td><td class="hid">电码</td></tr>
+<td>字体</td><td class="ts">译文</td><td>电码</td><td>字体</td><td class="ts">译文</td><td>电码</td><td>字体</td><td class="ts">译文</td><td>电码</td><td>字体</td><td class="ts">译文</td><td>电码</td></tr>
 <tr>
-<th title="确信" class="my1l">Aa</th><td class="ts">Aa</td><td class="hid">· ‒</td><th title="存疑">Bb</th><td class="ts">Bb</td><td class="hid">‒ · · ·</td><th>C<span title="假设">c</span></th><td class="ts">Cc</td><td class="hid">‒ · ‒ ·</td><th class="my1l">Dd</th><td class="ts">Dd</td><td class="hid">‒ · ·</td></tr>
+<th title="确信" class="my1l">Aa</th><td class="ts">Aa</td><td class="b">· ‒</td><th title="存疑">Bb</th><td class="ts">Bb</td><td class="b">‒ · · ·</td><th>C<span title="假设">c</span></th><td class="ts">Cc</td><td class="b">‒ · ‒ ·</td><th class="my1l">Dd</th><td class="ts">Dd</td><td class="b">‒ · ·</td></tr>
 <tr>
-<th>Ee</th><td class="ts">Ee</td><td class="hid">·</td><th>F<span>f</span></th><td class="ts">Ff</td><td class="hid">· · ‒ ·</td><th>Gg</th><td class="ts">Gg</td><td class="hid">‒ ‒ ·</td><th>Hh</th><td class="ts">Hh</td><td class="hid">· · · ·</td></tr>
+<th>Ee</th><td class="ts">Ee</td><td class="b">·</td><th>F<span>f</span></th><td class="ts">Ff</td><td class="b">· · ‒ ·</td><th>Gg</th><td class="ts">Gg</td><td class="b">‒ ‒ ·</td><th>Hh</th><td class="ts">Hh</td><td class="b">· · · ·</td></tr>
 <tr>
-<th class="my1l">Ii</th><td class="ts">Ii</td><td class="hid">· ·</td><th><span>J</span>j</th><td class="ts">Jj</td><td class="hid">· ‒ ‒ ‒</td><th>Kk</th><td class="ts">Kk</td><td class="hid">‒ · ‒</td><th class="my1l">Ll</th><td class="ts">Ll</td><td class="hid">· ‒ · ·</td></tr>
+<th class="my1l">Ii</th><td class="ts">Ii</td><td class="b">· ·</td><th><span>J</span>j</th><td class="ts">Jj</td><td class="b">· ‒ ‒ ‒</td><th>Kk</th><td class="ts">Kk</td><td class="b">‒ · ‒</td><th class="my1l">Ll</th><td class="ts">Ll</td><td class="b">· ‒ · ·</td></tr>
 <tr>
-<th>Mm</th><td class="ts">Mm</td><td class="hid">‒ ‒</td><th class="my1l">Nn</th><td class="ts">Nn</td><td class="hid">‒ ·</td><th class="my1l">Oo</th><td class="ts">Oo</td><td class="hid">‒ ‒ ‒</td><th>Pp</th><td class="ts">Pp</td><td class="hid">· ‒ ‒ ·</td></tr>
+<th>Mm</th><td class="ts">Mm</td><td class="b">‒ ‒</td><th class="my1l">Nn</th><td class="ts">Nn</td><td class="b">‒ ·</td><th class="my1l">Oo</th><td class="ts">Oo</td><td class="b">‒ ‒ ‒</td><th>Pp</th><td class="ts">Pp</td><td class="b">· ‒ ‒ ·</td></tr>
 <tr>
-<th>Qq</th><td class="ts">Qq</td><td class="hid">‒ ‒ · ‒</td><th>Rr</th><td class="ts">Rr</td><td class="hid">· ‒ ·</td><th>Ss</th><td class="ts">Ss</td><td class="hid">· · ·</td><th>Tt</th><td class="ts">Tt</td><td class="hid">‒</td></tr>
+<th>Qq</th><td class="ts">Qq</td><td class="b">‒ ‒ · ‒</td><th>Rr</th><td class="ts">Rr</td><td class="b">· ‒ ·</td><th>Ss</th><td class="ts">Ss</td><td class="b">· · ·</td><th>Tt</th><td class="ts">Tt</td><td class="b">‒</td></tr>
 <tr>
-<th>Uu</th><td class="ts">Uu</td><td class="hid">· · ‒</td><th>Vv</th><td class="ts">Vv</td><td class="hid">· · · ‒</td><th>Ww</th><td class="ts">Ww</td><td class="hid">· ‒ ‒</td><th>Xx</th><td class="ts">Xx</td><td class="hid">‒ · · ‒</td></tr>
+<th>Uu</th><td class="ts">Uu</td><td class="b">· · ‒</td><th>Vv</th><td class="ts">Vv</td><td class="b">· · · ‒</td><th>Ww</th><td class="ts">Ww</td><td class="b">· ‒ ‒</td><th>Xx</th><td class="ts">Xx</td><td class="b">‒ · · ‒</td></tr>
 <tr>
-<th>Yy</th><td class="ts">Yy</td><td class="hid">‒ · ‒ ‒</td><th>Z<span>z</span></th><td class="ts">Zz</td><td class="hid">‒ ‒ · ·</td><td colspan="6" class="resv">⋯</td></tr>
+<th>Yy</th><td class="ts">Yy</td><td class="b">‒ · ‒ ‒</td><th>Z<span>z</span></th><td class="ts">Zz</td><td class="b">‒ ‒ · ·</td><td colspan="6" class="resv">⋯</td></tr>
 </tbody></table>
-<h2>数字 NUM</h2>
-<table class="bx" width="100%" cellspacing="0" cellpadding="0" border="0"><tbody>
+<h2>数字・NUM</h2>
+<table><tbody>
 <tr>
-<td>字体</td><td class="ts">译文</td><td class="hid">电码</td><td>字体</td><td class="ts">译文</td><td class="hid">电码</td><td>字体</td><td class="ts">译文</td><td class="hid">电码</td><td>字体</td><td class="ts">译文</td><td class="hid">电码</td></tr>
-<tr><th><span title="存疑">0</span></th><td class="ts">0</td><td class="hid">‒ ‒ ‒ ‒ ‒</td><th title="可信">1</th><td class="ts">1</td><td class="hid">· ‒ ‒ ‒ ‒</td><th>2</th><td class="ts">2</td><td class="hid">· · ‒ ‒ ‒</td><th>3</th><td class="ts">3</td><td class="hid">· · · ‒ ‒</td></tr>
-<tr><th>4</th><td class="ts">4</td><td class="hid">· · · · ‒</td><th>5</th><td class="ts">5</td><td class="hid">· · · · ·</td><th><span>6</span></th><td class="ts">6</td><td class="hid">‒ · · · ·</td><th><span>7</span></th><td class="ts">7</td><td class="hid">‒ ‒ · · ·</td></tr>
-<tr><th><span>8</span></th><td class="ts">8</td><td class="hid">‒ ‒ ‒ · ·</td><th><span>9</span></th><td class="ts">9</td><td class="hid">‒ ‒ ‒ ‒ ·</td><td colspan="6" class="resv">⋯</td></tr>
+<td>字体</td><td class="ts">译文</td><td>电码</td><td>字体</td><td class="ts">译文</td><td>电码</td><td>字体</td><td class="ts">译文</td><td>电码</td><td>字体</td><td class="ts">译文</td><td>电码</td></tr>
+<tr><th><span title="存疑">0</span></th><td class="ts">0</td><td class="b">‒ ‒ ‒ ‒ ‒</td><th title="可信">1</th><td class="ts">1</td><td class="b">· ‒ ‒ ‒ ‒</td><th>2</th><td class="ts">2</td><td class="b">· · ‒ ‒ ‒</td><th>3</th><td class="ts">3</td><td class="b">· · · ‒ ‒</td></tr>
+<tr><th>4</th><td class="ts">4</td><td class="b">· · · · ‒</td><th>5</th><td class="ts">5</td><td class="b">· · · · ·</td><th><span>6</span></th><td class="ts">6</td><td class="b">‒ · · · ·</td><th><span>7</span></th><td class="ts">7</td><td class="b">‒ ‒ · · ·</td></tr>
+<tr><th><span>8</span></th><td class="ts">8</td><td class="b">‒ ‒ ‒ · ·</td><th><span>9</span></th><td class="ts">9</td><td class="b">‒ ‒ ‒ ‒ ·</td><td colspan="6" class="resv">⋯</td></tr>
 </tbody></table>
 
-<hr/>
-<p><a href="https://afdian.net/@FairyFloss" target="_blank"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAKoAAACqAQMAAAAHuEbBAAAABlBMVEX///8paMktwjWqAAAA/0lEQVR42uWWUQ7EIAhESTyAR/LqHqkHMGGHwW3j7j/zUUMbfe0HgREwe8cajnXZsrAWB1dhPI24XQObJBIMp3AKvzo2wy8tDtc83npsfS4T40ya0/5yWYop5NHSfvRdivdafbYD1OOBy+Q+nXLOowjDNV4mh4MTG/wiwiFhpGtxAxZ/aTDK7WS1MyNYKWQFZnhCy3G5I04qPEIyTBpCtU2FyeBgyvnJZTnOuptCzu8qnAwZo495xSX4KTaZwHOMqsS7CTiDFGE72lEptj06DTaB20EBzgGqUcWRtF161fhb9oQ4mwDO56xZijNpq+dA56d8SvEtZJacbzsS4DesD+htH+j+JuO2AAAAAElFTkSuQmCC"></a><br/>* BY MYIL *</p>
-<img src="https://s01.flagcounter.com/mini/rgz5/bg_FFFFFF/txt_D1D1D1/border_FFFFFF/flags_0/" width="1">
-<img src="https://www.cutercounter.com/hits.php?id=hexkcqxk&nd=6&style=1" width="1">
+<br>
+<p><a href="https://afdian.net/@FairyFloss" target="_blank"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAKoAAACqAQMAAAAHuEbBAAAABlBMVEX///8paMktwjWqAAAA/0lEQVR42uWWUQ7EIAhESTyAR/LqHqkHMGGHwW3j7j/zUUMbfe0HgREwe8cajnXZsrAWB1dhPI24XQObJBIMp3AKvzo2wy8tDtc83npsfS4T40ya0/5yWYop5NHSfvRdivdafbYD1OOBy+Q+nXLOowjDNV4mh4MTG/wiwiFhpGtxAxZ/aTDK7WS1MyNYKWQFZnhCy3G5I04qPEIyTBpCtU2FyeBgyvnJZTnOuptCzu8qnAwZo495xSX4KTaZwHOMqsS7CTiDFGE72lEptj06DTaB20EBzgGqUcWRtF161fhb9oQ4mwDO56xZijNpq+dA56d8SvEtZJacbzsS4DesD+htH+j+JuO2AAAAAElFTkSuQmCC" alt="綿雲飴里"></a><br>* BY MYIL *</p>
+<img src="https://s01.flagcounter.com/mini/rgz5/bg_FFFFFF/txt_D1D1D1/border_FFFFFF/flags_0/" alt width="1">
+<img src="https://www.cutercounter.com/hits.php?id=hexkcqxk&nd=6&style=1" alt width="1">
 </body>
 </html>
