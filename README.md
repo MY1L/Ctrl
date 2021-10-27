@@ -70,12 +70,12 @@ Ctrl（control，寓意尺规作图）系列包含几个风格不同的字族。
 ## Zsye
 名称取自[ISO 15924](https://github.com/MY1L/Unicode/tree/main/abbr)里绘文字(Symbols (Emoji variant))的四字代码。
 - 彩色字体，为了更美观地显示绘文字而作。可见🅱️站专栏：[自制彩色字体Zsye发布・绘文字的隐藏技](https://www.bilibili.com/read/cv11706229)
-- 曾用名“Monu Zsye”，考虑到该字体完全原创，与其它Monu系列不同，迁为Ctrl系列。
-- [在线预览和测试Zsye](https://my1l.github.io/wwwoff/)
+- 曾名“Monu Zsye”，考虑到该字体完全原创，不属于Monu系列，迁来Ctrl系列。
+- [在线预览和测试Zsye（Monu旧版）](https://my1l.github.io/wwwoff/)
 
-**字体下载暂时放在[Monu/Releases](https://github.com/MY1L/QuQi/releases)**
+~~未来计划：拆分旗帜绘文字为新字体“Flag”，考虑到做旗帜工程量过大，应该会借用他人资源难以完全原创，~~不归Ctrl系列。
 
-未来计划：拆分旗帜绘文字为新字体“Flag”，考虑做旗帜工程量过大，应该会借用他人资源难以完全原创，将不属于Ctrl系列。
+备注：需要在视窗上显示旗帜绘文字的话，请至[MY1L/Plur](https://github.com/MY1L/Plur/releases)
 
 ## ????
 - Ding是窄体，Ordn是中到宽体，也许需要制作字宽介乎两者之间适合系统用的字体……
