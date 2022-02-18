@@ -23,36 +23,31 @@
 |Compressed|-|-|-|Comp (ADBE)|特窄?|
 |Condensed|-|Cn (ADBE,LINO)|Con (URW)|Cond (ADBE,URW)|窄|
 |Extended|-|Ex (LINO)|Ext (ADBE)|-|宽,≈CSS3的expanded|
-|Italic|-|It (ADBE,BITS,LINO)|Ita (H&FJ,URW)|Ital (URW)|意大利体⁂|
+|Italic|-|It (ADBE,BITS,LINO)|Ita (H&FJ,URW)|Ital (URW)|意大利体[^It]|
 |Mono|-|Mo (BITS)|-|*Mono*|等宽|
 |Oblique|O (LINO)|-|Obl (LINO)|Obli (URW)|倾斜体|
 |Outline|-|Ou (LINO)|-|-|空心|
 |Rounded|-|-|Rnd (H&FJ)|Rond *(MY)*|圆体|
 |Sans|-|-|-|*Sans*|无衬线|
-|Semi~|-|Sm (IBM)|-|*Semi*|半~,=Demi|
+|Semi~|-|Sm (IBM)|-|*Semi*|半~[^Sm],=Demi|
 |Serif|-|Se (BITS)|-|-|有衬线|
 |Thin|-|Th (LINO)|-|*Thin*|极细,100|
 |Ultra *Light*|-|Ul *(MY)*|Ult*Lt* (LINO)|-|特细,200,W1|
 |Extra *Light*|E*L* (ADBE)|-|Ext*Lt* (IBM)|-|特细,200,W2|
 |Light|L (ADBE)|Lt (IBM,LINO)|Lig (URW)|Ligh (URW)|细,300,W3|
 |Regular/Roman|R (ADBE)|Ra *(MY)*|Reg (URW)|Regu/Roma (URW)|常规,400|
-|Medium|M (ADBE)|Md (LINO)|Med (URW)|Medm (IBM)	/	Medi (URW)|中,500,W5|
-|DemiBold|D (ADBE)|Db *(MY)*|Dem (URW)|Demi/Book※ (URW)|半粗,600,W6|
+|Medium|M (ADBE)|Md (LINO)|Med (URW)|Medm (IBM)	/	Medi (URW)|中粗,500,W5|
+|DemiBold|D (ADBE)|Db *(MY)*|Dem (URW)|Demi/Book[^Db] (URW)|半粗,600,W6|
 |Bold|B (ADBE)|Bd (BITS,LINO)|Bld (IBM)	/	Bol (URW)|*Bold*|粗,700,W7|
 |Extra Bold|-|Xb *(MY)*|-|-|特粗,800,W8|
 |Black|K *(MY)*|-|Blk (LINO)|-|极粗/黑,900|
 |Heavy|H (ADBE)|Hv (LINO)|-|-|极粗,900|
 |Extra *Black*|X*Blk* (LINO)|Xk *(MY)*|-|-|特黑,1000?|
 
-### 注释
-1. ⁂：我曾想译作“写意体”，略作“写体”，与“斜体”谐音。可见[HanItalic](https://github.com/MY1L/HanItalic)
-2. ※：DemiBold也常作Semibold。“Book（书版）”有光学尺寸的意味，可能比常规粗也可能比常规细，只是URW恰好有某字体相当于Demi……
-3. ~：对照CSS3，我猜“Semi Light”会不会等于Normal(400)，或Normal与Light之间(350)？也许用不上这个词🤔
-
 ## 备考
 上表的字重描述词的说明有2种不一致的对应关系：
 
-[CSS3为`font-weight`和字体名中的字重描述词给的对应关系](https://www.w3.org/TR/css-fonts-3/#font-weight-prop)
+#### [CSS3为`font-weight`和字体名中的字重描述词给的对应关系](https://www.w3.org/TR/css-fonts-3/#font-weight-prop)
 1. 100 - Thin
 2. 200 - Extra Light (Ultra Light)
 3. 300 - Light
@@ -63,7 +58,7 @@
 8. 800 - Extra Bold (Ultra Bold)
 9. 900 - Black (Heavy)
 
-ISO/IEC9541-1，信息技术 字型信息交换 第1部分：体系结构，8.6.12：
+#### ISO/IEC9541-1，信息技术 字型信息交换 第1部分：体系结构，8.6.12
 - 0 不用
 - 1 → ultra light
 - 2 → extra light
@@ -75,3 +70,8 @@ ISO/IEC9541-1，信息技术 字型信息交换 第1部分：体系结构，8.6.
 - 8 → extra bold
 - 9 → ultra bold
 > 常见于日本厂商字体的“W1~9”后缀对应关系，比较过时。
+
+### 注释
+[^It]: 我曾想译作“写意体”，略作“写体”，与“斜体”谐音。可见[HanItalic](https://github.com/MY1L/HanItalic)
+[^Db]: DemiBold也常作Semibold。“Book（书版）”有光学尺寸的意味，可能比常规粗也可能比常规细，只是URW恰好有某字体相当于Demi……
+[^Sm]: 对照CSS3，我猜“Semi Light”会不会等于Normal(400)，或Normal与Light之间(350)？也许用不上这个词🤔
