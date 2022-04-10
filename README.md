@@ -67,6 +67,13 @@ Ctrl（control，寓意尺规作图）系列包含几个风格不同的字族。
 - 这是个设计为与雅黑等系统字体风格搭配的原创西夏文黑体，字形原公开在我的字体[MonuLast](https://github.com/MY1L/Unicode)中，现分离出来，添加字符（𗄴𗼇𘠈𘠐𘢌𘤩𘴀等）并修正。
 - 因为缺乏时间人手的关系，该字体为协作形式，字体文件中的笔画已拆分方便大家参与制作，且有做可变偏旁的计划，欢迎相关文字爱好者来Q群聊：`879413445`
 
+## Zpix
+![Zpix.png](res/Zpix.png)
+
+目的在搭配[SolidZORO/Zpix(最像素)](https://github.com/SolidZORO/zpix-pixel-font)汉字的西文像素字体。
+- 介绍详见b站专栏：[给像素字体加上高级排版特性：Ctrl Zpix介绍](https://www.bilibili.com/read/cv16072622)
+- 2022-4-10：初发布，字符量不足，作高级排版特性演示。
+
 ## Zsye
 名称取自[ISO 15924](https://github.com/MY1L/Unicode/tree/main/abbr)里绘文字(Symbols (Emoji variant))的四字代码。
 - 彩色字体，为了更美观地显示绘文字而作。可见🅱️站专栏：[自制彩色字体Zsye发布・绘文字的隐藏技](https://www.bilibili.com/read/cv11706229)
