@@ -41,13 +41,13 @@ Ctrl（control，寓意尺规作图）系列包含几个风格不同的字族。
 
 未来计划：补充一些拉丁、希腊、西里尔大写字母，考虑添加`clig`，改进`mark` `vert`，甚至`mkmk` `vrt2` `vrtr`。话说全角小写英文有可能做得美观吗……
 
-不打算支持的特性：
-- `hwid`该字体风格不适合半角；`twid`⅓em宽、`qwid`¼em宽更不可能了。
-- `onum`该字体风格不适合Oldstyle数字。
-- `smcp` `pcap`设计上几乎已经是small-caps＼petite caps，除了'p'、'q'
+或不打算支持的特性：
+- `hwid` 该字体风格不适合半角；`twid`⅓em宽、`qwid`¼em宽更不可能了。
+- `onum` 该字体风格不适合Oldstyle数字。
+- `smcp` `pcap` 设计上几乎已经是small-caps＼petite caps，除了'p'、'q'
 - `c2pc` `c2sc` 同上，也会导致无法区分大小写。
-- `titl`基本已经是按titling-caps设计。
-- `unic`大型小写？
+- `titl` 基本已是按titling-caps设计。
+- `unic` Unicase，“大型小写”、“大小写不分”体。
 
 ## Runr
 ![Runr.png](res/Runr.png)
@@ -72,7 +72,8 @@ Ctrl（control，寓意尺规作图）系列包含几个风格不同的字族。
 
 目的在搭配[SolidZORO/Zpix(最像素)](https://github.com/SolidZORO/zpix-pixel-font)汉字的西文像素字体。
 - 介绍详见b站专栏：[给像素字体加上高级排版特性：Ctrl Zpix介绍](https://www.bilibili.com/read/cv16072622)
-- 2022-4-10：初发布，字符量不足，作高级排版特性演示。
+- 2022-4-10：初发布，作高级排版特性演示。
+- 2022-4-20：更新第3.1版，基本完成。
 
 ## Zsye
 名称取自[ISO 15924](https://github.com/MY1L/Unicode/tree/main/abbr)里绘文字(Symbols (Emoji variant))的四字代码。
@@ -80,9 +81,7 @@ Ctrl（control，寓意尺规作图）系列包含几个风格不同的字族。
 - 曾名“Monu Zsye”，考虑到该字体完全原创，不属于Monu系列，迁来Ctrl系列。
 - [在线预览和测试Zsye（Monu旧版）](https://my1l.github.io/wwwoff/)
 
-~~未来计划：拆分旗帜绘文字为新字体“Flag”，考虑到做旗帜工程量过大，应该会借用他人资源难以完全原创，~~不归Ctrl系列。
-
-备注：需要在视窗上显示旗帜绘文字的话，请至[MY1L/Plur](https://github.com/MY1L/Plur/releases)
+~未来计划：拆分旗帜绘文字为新字体“Flag”，考虑到做旗帜工程量过大，应该会借用他人资源难以完全原创，~ 不归Ctrl系列。目前如需要在视窗上显示旗帜绘文字，请至[MY1L/Plur](https://github.com/MY1L/Plur/releases)
 
 ## ????
 - Ding是窄体，Ordn是中到宽体，也许需要制作字宽介乎两者之间适合系统用的字体……
