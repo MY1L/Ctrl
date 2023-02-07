@@ -7,7 +7,18 @@ Ctrl（control，寓意尺规作图）系列包含几个风格不同的字族。
 
 ----
 
-包含如下字族，目前都是无衬线风格（不排除将来做衬线体）
+包含如下字族，目前有无衬线和像素风格。
+
+## Ctrl
+![Ctrl.png](res/Ctrl.png)
+
+名称取自 ~~唱、跳、rap、篮球 的缩写~~ 控制符([Controls](https://github.com/MY1L/Unicode/tree/main/Blocks))的[缩写](https://github.com/MY1L/Unicode/tree/main/abbr)，嗯，与本系列自身重名了。
+
+一个完全原创的工具字体，作用类似控制图符 (**Control** Pictures)，用于让那些统一码规定没有字形的 控制字 (**Control** Character)、变体选择符 (Variation Selectors)、格式控制符 (Format **Control**s)、空格 (space等零宽非打印字符)、标签 (Tag) 等尽量显示**替代图符**以便选择复制。其字形形如[Monu Last](https://github.com/MY1L/Unicode)的区段范例字形和[Monu Hani](https://github.com/MY1L/Unicode/tree/main/Hani)的表意描述符。
+- 作为我原创的字体，其中西文字形用的是下方字宽可变字体[Ordn](#ordn)改造。
+- 顺带一提这些图符都是手动拼字，不是批量生成的，那样没法控制字距`kern`，比如`74`会显得间隔很远。
+- 它支持的字符远不止[Unicode/FontList.csv](https://github.com/MY1L/Unicode/blob/main/FontList/FontList.csv)列出的那些，其它统一码中规定非打印或无字形的特定字符也有。
+- 注意，这是个有专门用途的工具，可能会干扰日常使用——你应该不会希望网页上每个空格都是可见的吧？
 
 ## Ding
 规整的工业风窄体，用于限定字高的场合下展现更多信息。名称取自DIN和Dingbats。
@@ -87,5 +98,8 @@ Ctrl（control，寓意尺规作图）系列包含几个风格不同的字族。
 - Ding是窄体，Ordn是中到宽体，也许需要制作字宽介乎两者之间适合系统用的字体……
 - 甲骨文（Orcl，暂用甲骨文公司的纳斯达克股票代码缩写）或其它古文黑体，即[MonuHani](https://github.com/MY1L/Unicode/releases)的完全原创部分。
 - 藏文黑体，Zang（行政区缩写）＼Tibt（ISO 15924里藏文(Tibetan)的四字代码）
-- 某衬线风格的女书。
 - ……
+
+----
+
+其它原创字体如[柳叶体女书](https://github.com/MY1L/Nyushu)和[曺全碑隸](https://github.com/MY1L/CoQuBeLi)，由于是衬线风格，不放在这。
