@@ -3,8 +3,8 @@
 
 ## 列表
 
-### 厂商ID
-每个字体都有、最多4字的代码。以下列出本表提及的厂商。
+### 厂商标识
+**vendor ID**，每个字体都有、最多4字的代码。以下列出本表提及的厂商。
 
 |ID|厂商|
 | -: | :- |
@@ -23,7 +23,7 @@
 |*Aa*|[AllAcronyms.com](https://www.allacronyms.com/)|
 
 某些字体软件会自带一个厂商列表（如[NexusFont](https://github.com/MY1L/Chinese)带有`vendors.list`文件，收录388个厂）但总有新厂商出现，还有些厂商会改ID[^MT]或注册多个ID，所以列举不完的。
-[这儿有微软登记的不完全列表](https://learn.microsoft.com/en-us/typography/vendors/)，注意其中有些并非厂商，也有某些代码虽有字体使用但微软不接受而未列出。
+[这儿有微软登记的不完全列表](https://learn.microsoft.com/en-us/typography/vendors/)，注意其中有些并非厂商，也有某些代码虽有字体使用但微软不接受而未列出。顺带，我字体的ID一般是`MYIL`（如有`MY1L`那也是我），可在前面微软链接中看到。
 
 ### 出典
 PostScript全名的通常缀序是：字重、字宽、倾斜、视觉尺寸。
@@ -31,7 +31,7 @@ PostScript全名的通常缀序是：字重、字宽、倾斜、视觉尺寸。
 表格中若是词组，简写字数不计斜体的。标`?`的表示不确定。
 
 #### 字重
-Weight，目前我倾向于用2字简写（因为对应`font-weight`100~900齐全）
+**Weight**，目前我倾向于用2字简写（因为对应`font-weight`100~900齐全）
 
 |字重|1字简写|2字简写|3字简写|4字简写|说明|
 | -: | :- | :- | :- | :- | :- |
@@ -49,7 +49,6 @@ Weight，目前我倾向于用2字简写（因为对应`font-weight`100~900齐�
 |Black|K *(My)*|Bl (MS)|Blk (ADBE,LINO,MS)|-|超粗/黑,900|
 |Extra *Black*|X*Blk* (ADBE,LINO)|Xk *(My)*|-|-|特黑,950|
 
-##### 据[DWRITE_FONT_WEIGHT](https://learn.microsoft.com/zh-cn/windows/win32/api/dwrite/ne-dwrite-dwrite_font_weight)
 据称除了单独“Semi”[^zh]，视窗认同以下Preferred Subfamily（首选子族）为同一字族，字体文件夹会归拢之：
 - 100 = Thin
 - 200 = ExtraLight, UltraLight
@@ -63,9 +62,10 @@ Weight，目前我倾向于用2字简写（因为对应`font-weight`100~900齐�
 - 900 = Heavy
 - 900 = Black
 - 950 = ExtraBlack, UltraBlack
+> ※ [DWRITE_FONT_WEIGHT](https://learn.microsoft.com/zh-cn/windows/win32/api/dwrite/ne-dwrite-dwrite_font_weight)
 
 #### 字宽
-Width，目前我倾向于用4字简写，尤其是“[Mono](https://github.com/MY1L/Ctrl#mono)”，若字体名称较长则用2字。
+**Width**，目前我倾向于用4字简写，尤其是“[Mono](https://github.com/MY1L/Ctrl#mono)”。若字体名称较长则用2字。
 
 |字宽|1字简写|2字简写|3字简写|4字简写|说明|
 | -: | :- | :- | :- | :- | :- |
@@ -78,7 +78,8 @@ Width，目前我倾向于用4字简写，尤其是“[Mono](https://github.com/
 |Narrow|-|Nr (ADBE)|Nrw *(Aa)*|Nrrw *(My)*|稍窄,CSS[^Cn]用的`narrower`|
 |Wide|W *(Aa)*|Wd *(Aa)*|-|*Wide*|更宽/扁? CSS[^Cn]用的`wider`|
 
-##### 据[DWRITE_FONT_STRETCH](https://learn.microsoft.com/zh-cn/windows/win32/api/dwrite/ne-dwrite-dwrite_font_stretch)
+[Aa]: https://www.allacronyms.com/normal/abbreviated
+
 据称除了“Demi~”[^zh]，视窗认同以下首选子族为字族：
 - 1 = UltraCondensed
 - 2 = ExtraCondensed
@@ -88,10 +89,11 @@ Width，目前我倾向于用4字简写，尤其是“[Mono](https://github.com/
 - 7 = Expanded, Extended
 - 8 = ExtraExpanded, ExtraExtended
 - 9 = UltraExpanded, UltraExtended
+> ※ [DWRITE_FONT_STRETCH](https://learn.microsoft.com/zh-cn/windows/win32/api/dwrite/ne-dwrite-dwrite_font_stretch)
 > Normal和Medium[^Nl]的usWidthClass = 5
 
 #### 样式
-Style。不限倾斜，以下还列举了其它不便分类的样式。
+**Style**，不限倾斜，以下还列举了其它不便分类的样式。
 
 |样式|1字简写|2字简写|3字简写|4字简写|说明|
 | -: | :- | :- | :- | :- | :- |
@@ -103,7 +105,7 @@ Style。不限倾斜，以下还列举了其它不便分类的样式。
 |Inclined|-|Ic (ADBE)|-|-|斜体?|
 |Italic|I (DAMA,MS)|It (ADBE,BITS,LINO,MS)|Ita (H&FJ,URW)|Ital (URW)|意大利体[^It]|
 |Kursiv|-|Ks (ADBE)|-|-|Italic(德语)|
-|Nord|-|Nd (ADBE)|-|~|宽&粗[^Nd]|
+|Nord|-|Nd (ADBE)|-|~|宽又粗[^Nd]|
 |Oblique|O (LINO)|-|Obl (ADBE,LINO)|Obli (URW)|倾斜体|
 |Outline|-|Ou (LINO)|-|-|轮廓/空心体|
 |Poster|-|Po (ADBE)|-|-|海报?|
@@ -117,13 +119,13 @@ Style。不限倾斜，以下还列举了其它不便分类的样式。
 |Super|-|Su (ADBE)|-|-|超?|
 |Upright *Italic*|-|Up (ADBE)|-|-|直立写意体[^It]|
 
-##### 据[DWRITE_FONT_STYLE](https://learn.microsoft.com/en-us/windows/win32/api/dwrite/ne-dwrite-dwrite_font_style)
 视窗认同以下首选子族为字族：
 - Italic
 - Oblique
+> ※ [DWRITE_FONT_STYLE](https://learn.microsoft.com/en-us/windows/win32/api/dwrite/ne-dwrite-dwrite_font_style)
 
 #### 视觉尺寸
-Optical Size，适用字号的单位是pt(point)，参见 [Adobe - Fonts : Type topics: Optical Size](https://web.archive.org/web/*/http://www.adobe.com/type/topics/opticalsize.html)
+**Optical Size**，适用字号的单位是pt(point)，参见 [Adobe - Fonts : Type topics: Optical Size](https://web.archive.org/web/*/http://www.adobe.com/type/topics/opticalsize.html)
 
 |尺寸|2字简写|4字词|适用字号|说明|
 | -: | :- | :- | - | :- |
@@ -135,7 +137,8 @@ Optical Size，适用字号的单位是pt(point)，参见 [Adobe - Fonts : Type 
 |Opticals|Op *(Aa)*|-|-|视觉尺寸可变? Adobe后缀|
 
 #### 其它
-主要是微软特色。
+皆微软特色。
+
 |名称|简写|
 | -: | :- |
 |Emoji|Emj|
@@ -158,7 +161,7 @@ Optical Size，适用字号的单位是pt(point)，参见 [Adobe - Fonts : Type 
 9. 900 - Black (Heavy)
 
 #### ISO
-	/IEC9541-1，信息技术 字型信息交换 第1部分：体系结构，8.6.12
+　　/IEC9541-1，信息技术 字型信息交换 第1部分：体系结构，8.6.12
 > 常见于日本厂商字体的“W1~9”后缀对应关系，比较过时。
 - 0 不用
 - 1 → ultra light
@@ -170,7 +173,6 @@ Optical Size，适用字号的单位是pt(point)，参见 [Adobe - Fonts : Type 
 - 7 → bold
 - 8 → extra bold
 - 9 → ultra bold
-
 
 ### 注释
 [^Bk]: “Book”表示造字者认为该字重最宜阅读，可能比常规粗也可能比常规细，只是URW恰好有某字体相当于Demi🤔
@@ -184,5 +186,3 @@ Optical Size，适用字号的单位是pt(point)，参见 [Adobe - Fonts : Type 
 [^Nl]: Normal用作字重时等同Regular，用作字宽时等同Medium。
 [^x]: x字高（x-height），通俗来讲，是西文字体里小写字母斩头去尾后中间那部分的高，以`x`为典型。
 [^zh]: [怎么给系统字体归类？ - 知乎](https://www.zhihu.com/question/29715469) 同一行表示视窗认为等同。
-
-[Aa]: https://www.allacronyms.com/normal/abbreviated
