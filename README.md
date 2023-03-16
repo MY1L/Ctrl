@@ -14,7 +14,7 @@ Ctrl（control，寓意尺规作图）系列包含几个风格不同的字族。
 
 **尺规图符**。名称取自 ~~唱、跳、rap、篮球 的缩写~~ 控制符([Controls](https://github.com/MY1L/Unicode/tree/main/Blocks))的[缩写](https://github.com/MY1L/Unicode/tree/main/abbr)，嗯，与本系列自身重名了。
 
-一个完全原创的工具字体，作用类似控制图符 (**Control** Pictures)，用于让那些统一码规定没有字形的 控制字 (**Control** Character)、变体选择符 (Variation Selectors)、格式控制符 (Format **Controls**)、空格 (space等零宽非打印字符)、标签 (Tag) 等尽量显示**替代图符**以便发现、选择、复制。其字形形如[Monu Last](https://github.com/MY1L/Unicode)的区段范例字形和[Monu Hani]的表意描述符。
+一个完全原创的工具字体，作用类似控制图符 (**Control** Pictures)，用于让那些统一码规定没有字形的 控制字 (**Control** Character)、变体选择符 (Variation Selectors)、格式控制符 (Format **Controls**)、空格 (space等零宽非打印字符)、标签 (Tag) 等尽量显示**替代图符**以便发现、选择、复制。其字形形如[Monu Last][MonUni]的区段范例字形和[Monu Hani]的表意描述符。
 - 作为我的原创，其中西文字形改造了我在2021年设计的字宽可变字体，下方[Ordn](#ordn)有详述。
 - 什锦符号也继承我过去绘制的[绘文字字形](#zsye)。不过为搭配Ordn，凡圆形部分都改为超椭圆风格。
 - 顺带一提这些图符都是手动拼字，不是批量生成：试过批量会没法控制字距`kern`，比如`74`会显得间隔很远。
@@ -33,6 +33,11 @@ Ctrl（control，寓意尺规作图）系列包含几个风格不同的字族。
 
 未来计划：做成字重和字宽可变。添加苏州码子等数字字符、SMP平面的字符（以DIN的风格呈现），和一些Dingbats。
 
+## Kana
+**尺规假名**。因为Noto、思源都不含假名扩充乙（`1AFF0..`Kana Extended-B：𚿰𚿱𚿲𚿳𚿵𚿶𚿷𚿸𚿹𚿺𚿻𚿽𚿾），我原创了一套。
+- 其中实心点相对空心点有视觉处理。
+- 已被用于[Monu Hani]。还包含其它一些我绘制的假名字形。
+
 ## Latf
 **尺规哥特**。名称取自[ISO 15924]里拉丁德文尖角体(Latin (Fraktur variant))的四字代码。
 - 无衬线风格的𝔉𝔯𝔞𝔨𝔱𝔲𝔯.
@@ -40,7 +45,13 @@ Ctrl（control，寓意尺规作图）系列包含几个风格不同的字族。
 
 未来计划：做成字重可变。
 
-## [Mono](https://github.com/MY1L/Ctrl/blob/main/abbr.md)
+## Math
+**尺规计数**。目前只含卡克托维克数字（`1D2C0..`Kaktovik Numerals：𝋀𝋁𝋂𝋃𝋄𝋅𝋆𝋇𝋈𝋉𝋊𝋋𝋌𝋍𝋎𝋏𝋐𝋑𝋒𝋓）
+- 从字形易知为何它是20进制。做这字体，“油墨陷阱”(避免笔画交叉处过黑)是必要的。
+- 经验：数字2不能做成V，4不能做成W，应当如统一码范例那样不对称，否则7 9 12 14 17 19会显得难看。
+- 已被用于[Noto Unicode][MonUni]。
+
+## [Mono][abbr]
 **尺规等宽**。未来计划：或将[Ding](#ding)改为编程用等宽形式。考虑实用性，可能只做一般代码编辑器会用到的 常规、粗体、意大利体。为了与系统中文字体搭配，只有半角或半角倍数的宽度。
 
 ## Ordn
@@ -48,7 +59,7 @@ Ctrl（control，寓意尺规作图）系列包含几个风格不同的字族。
 
 **尺规列序**。用于序数（ordinal，OpenType序数特性）及竖排全角用的可变字体。
 - 字形是比较胖的超椭圆风格。可见Ｂ站专栏：[CtrlOrdn：超椭圆风竖排用可变字体，及ꓡꓲ-ꓢꓴ老傈僳文](https://www.bilibili.com/read/cv12807979)
-- 出于混排考虑，度量、字重均与雅黑的汉字相当，实例对应雅黑的字重（常规、粗体）可[查表](https://github.com/MY1L/Ctrl/blob/main/abbr.md)。
+- 出于混排考虑，度量、字重均与雅黑的汉字相当，实例对应雅黑的字重（常规、粗体）可[查表][abbr]。
 - 有`１０`连字（需开启OT特性`ordn`），该连字与单个全角数字等宽，用于排行榜等。
 - 支持这些OT特性：`aalt` `calt` `case` `ccmp` `fwid` `kern` `liga` `mark` `ordn` `pnum` `pwid` `salt` `ss01` `tnum` `vert` `zero`（注：由于默认斜杠〇，开启`zero`反而去除斜杠），支持变体选择符。
 - 有字重和字宽2个轴。为方便不支持可变字体的软件，也做了通常的字体族实例。
@@ -80,6 +91,11 @@ Ctrl（control，寓意尺规作图）系列包含几个风格不同的字族。
 > 注※：`U+200D ZERO WIDTH JOINER`简称ZWJ，是个零宽隐形的字符，用于指示其前后2个字符应当连字（需字体作相应支持），由于宽度为〇难以选中复制，为方便起见，上文凡写明“zwj连字”的2个字符中间都已经夹了个ZWJ。
 你可以试试在某些软件中将字体设为[Ctrl Ctrl](#ctrl)来显示它。
 
+## Seal
+**尺规说文**。说文部首（王福庵风格）小篆黑体，或含[Monu Hani]的原创部分。
+
+未来计划：做成字重可变。已有实例。
+
 ## Tang
 **尺规西夏**。名称取自[ISO 15924]里西夏(Tangut)的四字代码。
 - 这是个设计为与雅黑等系统字体风格搭配的原创西夏文黑体，字形原公开在我的字体[MonuLast](https://github.com/MY1L/Unicode)中，现分离出来，添加字符（𗄴𗼇𘠈𘠐𘢌𘤩𘴀等）并修正。
@@ -103,13 +119,15 @@ Ctrl（control，寓意尺规作图）系列包含几个风格不同的字族。
 
 ## ????
 - Ding是窄体，Ordn是中到宽体，也许需要制作字宽介乎两者之间适合系统用的“未来”体，西文名称征集中……
-- 甲骨文（Orcl，暂用甲骨文公司的纳斯达克股票代码缩写）或其它古文黑体，即[Monu Hani]的完全原创部分。
+- 甲骨文（[Orcl](https://github.com/MY1L/Unicode/tree/main/abbr#已有实例以及我编的)）或其它古文黑体，即[Monu Hani]的原创部分。
 - 藏文黑体，Zang（行政区缩写）＼Tibt（[ISO 15924]里藏文(Tibetan)的四字代码）
 - ……
 
 [Monu Hani]: https://github.com/MY1L/Unicode/tree/main/Hani
 [ISO 15924]: https://github.com/MY1L/Unicode/tree/main/abbr
+[MonUni]: https://github.com/MY1L/Unicode
+[abbr]: https://github.com/MY1L/Ctrl/blob/main/abbr.md
 
 ----
 
-我其它原创字体如[柳叶体女书](https://github.com/MY1L/Nyushu)和[曺全碑隸](https://github.com/MY1L/CoQuBeLi)，由于是衬线风格，不放在这。
+我其它原创字体如[女书柳叶](https://github.com/MY1L/Nyushu)和[曺全碑隸](https://github.com/MY1L/CoQuBeLi)，由于是衬线风格，不放在这。

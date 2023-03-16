@@ -7,7 +7,7 @@
 **vendor ID**，每个字体都有、最多4字的代码。以下列出本表提及的厂商。
 
 |ID|厂商|
-| -: | :- |
+| -: | - |
 |ADBE|Adobe|
 |APPL|Apple|
 |BITS|Bitstream|
@@ -22,8 +22,8 @@
 |*My*|我（綿飴）编的|
 |*Aa*|[AllAcronyms.com](https://www.allacronyms.com/)|
 
-某些字体软件会自带一个厂商列表（如[NexusFont](https://github.com/MY1L/Chinese)带有`vendors.list`文件，收录388个厂）但总有新厂商出现，还有些厂商会改ID[^MT]或注册多个ID，所以列举不完的。
-[这儿有微软登记的不完全列表](https://learn.microsoft.com/en-us/typography/vendors/)，注意其中有些并非厂商，也有某些代码虽有字体使用但微软不接受而未列出。顺带，我字体的ID一般是`MYIL`（如有`MY1L`那也是我），可在前面微软链接中看到。
+某些字体软件会自带一个厂商列表（如[NexusFont](https://github.com/MY1L/Chinese)带有`vendors.list`文件，收录388个厂）但总有新厂商出现，还有些厂商[^MT]会改ID或注册多个ID，所以列举不完的。[这儿有微软登记的不完全列表](https://learn.microsoft.com/zh-cn/typography/vendors/#n)，注意其中有些并非厂商，也有某些ID虽有字体使用但因微软不接受而未列出。\
+顺带，我字体的ID一般是`MYIL`（如有`MY1L`那也是我），可见于前文微软列表。
 
 ### 出典
 PostScript全名的通常缀序是：字重、字宽、倾斜、视觉尺寸。
@@ -34,7 +34,7 @@ PostScript全名的通常缀序是：字重、字宽、倾斜、视觉尺寸。
 **Weight**，目前我倾向于用2字简写（因为对应`font-weight`100~900齐全）
 
 |字重|1字简写|2字简写|3字简写|4字简写|说明|
-| -: | :- | :- | :- | :- | :- |
+| -: | - | - | - | - | - |
 |Thin|-|Th (ADBE,LINO,DAMA)|Thn *(Aa)*|*Thin*|超细,100|
 |Ultra *Light*|-|Ul *(My,Aa)*|Ult*Lt* (ADBE,LINO)|-|极细, 200,W1|
 |Extra *Light*|E*L* (ADBE)|-|Ext*Lt* (IBM)|-|纤细, 200,W2|
@@ -68,7 +68,7 @@ PostScript全名的通常缀序是：字重、字宽、倾斜、视觉尺寸。
 **Width**，目前我倾向于用4字简写，尤其是“[Mono](https://github.com/MY1L/Ctrl#mono)”。若字体名称较长则用2字。
 
 |字宽|1字简写|2字简写|3字简写|4字简写|说明|
-| -: | :- | :- | :- | :- | :- |
+| -: | - | - | - | - | - |
 |Compact|-|Ct (ADBE)|-|Cmpt *(Aa)*|窄?|
 |Compressed|-|Cm (ADBE)|-|Comp (ADBE)|特窄|
 |Condensed|C (DAMA)|Cn (ADBE,LINO,MT)|Con (URW)|Cond (ADBE,MT,URW)|窄,CSS属性[^Cn]用值|
@@ -89,14 +89,14 @@ PostScript全名的通常缀序是：字重、字宽、倾斜、视觉尺寸。
 - 7 = Expanded, Extended
 - 8 = ExtraExpanded, ExtraExtended
 - 9 = UltraExpanded, UltraExtended
-> ※ [DWRITE_FONT_STRETCH](https://learn.microsoft.com/zh-cn/windows/win32/api/dwrite/ne-dwrite-dwrite_font_stretch)
-> Normal和Medium[^Nl]的usWidthClass = 5
+> ※ [DWRITE_FONT_STRETCH](https://learn.microsoft.com/zh-cn/windows/win32/api/dwrite/ne-dwrite-dwrite_font_stretch)\
+Normal和Medium[^Nl]的usWidthClass = 5
 
 #### 样式
 **Style**，不限倾斜，以下还列举了其它不便分类的样式。
 
 |样式|1字简写|2字简写|3字简写|4字简写|说明|
-| -: | :- | :- | :- | :- | :- |
+| -: | - | - | - | - | - |
 |Backslant|-|Bs *(My)*|-|-|前倾(斜)体|
 |Bold Italic/Oblique|Z (MS)|BI (BITS,MS)|-|-|粗斜体|
 |Book|-|Bk (ADBE)|Boo (URW)|*Book*|宜读[^Bk]|
@@ -118,6 +118,7 @@ PostScript全名的通常缀序是：字重、字宽、倾斜、视觉尺寸。
 |SmallCapitals|-|SC (URW)|-|SmCp (REAL)|小型大写体|
 |Super|-|Su (ADBE)|-|-|超?|
 |Upright *Italic*|-|Up (ADBE)|-|-|直立写意体[^It]|
+|Variable( Font)|-|VF ([MS等业界约定](https://learn.microsoft.com/zh-cn/typography/opentype/spec/recom#filenames))|-|-|可变(字体)|
 
 视窗认同以下首选子族为字族：
 - Italic
@@ -127,20 +128,20 @@ PostScript全名的通常缀序是：字重、字宽、倾斜、视觉尺寸。
 #### 视觉尺寸
 **Optical Size**，适用字号的单位是pt(point)，参见 [Adobe - Fonts : Type topics: Optical Size](https://web.archive.org/web/*/http://www.adobe.com/type/topics/opticalsize.html)
 
-|尺寸|2字简写|4字词|适用字号|说明|
-| -: | :- | :- | - | :- |
-|Display|Ds (ADBE)|-|>24(ADBE)	/	≥20(APPL)|标题/美术字：粗细对比强、字距紧、细节更多、x字高[^x]更小|
-|Subhead|Sh *(My)*|-|14~24(ADBE)|副标题：介乎 Display 和 Text|
-|Text|-|*Text*|9~14(ADBE)	/	<20(APPL)|正文|
-|Small(*Text*)|-|-|-|小字：介乎 Text 和 Caption ?|
-|Caption|-|-|6~8(ADBE)|注脚：粗细对比弱、字距松、字形略宽|
-|Opticals|Op *(Aa)*|-|-|视觉尺寸可变? Adobe后缀|
+|尺寸|2字简写|适用字号|说明|
+| -: | - | - | - |
+|Display|Ds (ADBE)|>24(ADBE)	/	≥20(APPL)|标题/美术字：粗细对比强、字距紧、细节更多、x字高[^x]更小|
+|Subhead|Sh *(My)*|14~24(ADBE)|副标题：介乎 Display 和 Text|
+|Text|-|9~14(ADBE)	/	<20(APPL)|正文|
+|Small(*Text*)|St *(My)*|-|小字：介乎 Text 和 Caption ?|
+|Caption|-|6~8(ADBE)|注脚：粗细对比弱、字距松、字形略宽|
+|Opticals|Op *(Aa)*|-|视觉尺寸可变? Adobe后缀|
 
 #### 其它
-皆微软特色。
+目前皆微软特色。
 
 |名称|简写|
-| -: | :- |
+| -: | - |
 |Emoji|Emj|
 |Historic|His|
 |Symbol|Sym|
