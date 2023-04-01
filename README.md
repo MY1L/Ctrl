@@ -1,9 +1,12 @@
+<a href="https://github.com/MY1L/icense"><img alt="綿飴协议 | MY1License" src="https://github.com/MY1L/icense/raw/main/Seal.svg" align="right" width="120" height="64"/></a>
+
 # Ctrl
 基于[2021年7月18日的投票结果](https://t.bilibili.com/548801038367849128?tab=2)，我的完全原创字体家族现以“尺规 | Ctrl”为姓。
 
 Ctrl（control，寓意尺规作图）系列包含几个风格不同的字族。由于使用共通的字重和度量，这些字族任意混排仍能协调，也与雅黑等系统中文字体搭配。
 
-**〔字体可在[/Releases](https://github.com/MY1L/Ctrl/releases)下载〕**
+<!-- **〔字体可在[/Releases](https://github.com/MY1L/Ctrl/releases)搜索下载〕** -->
+<h3 align="center"><a href="https://github.com/MY1L/Ctrl/releases">〔字体可在 /Releases 搜索下载〕</a></h3>
 
 ----
 
@@ -52,7 +55,9 @@ Ctrl（control，寓意尺规作图）系列包含几个风格不同的字族。
 - 已被用于[Noto Unicode][MonUni]。
 
 ## [Mono][abbr]
-**尺规等宽**。未来计划：或将[Ding](#ding)改为编程用等宽形式。考虑实用性，可能只做一般代码编辑器会用到的 常规、粗体、意大利体。为了与系统中文字体搭配，只有半角或半角倍数的宽度。
+**尺规等宽**。
+
+未来计划：或将[Ding](#ding)改为编程用等宽形式。考虑实用性，可能只做一般代码编辑器会用到的 常规、粗体、意大利体。为了与系统中文字体搭配，只有半角或半角倍数的宽度。
 
 ## Ordn
 ![Ordn.gif](res/Ordn.gif)
@@ -62,7 +67,7 @@ Ctrl（control，寓意尺规作图）系列包含几个风格不同的字族。
 - 出于混排考虑，度量、字重均与雅黑的汉字相当，实例对应雅黑的字重（常规、粗体）可[查表][abbr]。
 - 有`１０`连字（需开启OT特性`ordn`），该连字与单个全角数字等宽，用于排行榜等。
 - 支持这些OT特性：`aalt` `calt` `case` `ccmp` `fwid` `kern` `liga` `mark` `ordn` `pnum` `pwid` `salt` `ss01` `tnum` `vert` `zero`（注：由于默认斜杠〇，开启`zero`反而去除斜杠），支持变体选择符。
-- 有字重和字宽2个轴。为方便不支持可变字体的软件，也做了通常的字体族实例。
+- 有字重和字宽2个可变轴。为方便不支持可变字体的软件，也做了通常的字体族实例。
 - 因竖排用途，字宽可变的字形基本仅适用大写（其中全角的字身框始终保持全角不变）
 - 许多小写英文(ASCII)部分用小型大写凑数。支持大量的小型大写字符。
 - 2021-8-18：**支持老傈僳文（包含完整的傈僳、傈僳补充区段）**
@@ -77,6 +82,14 @@ Ctrl（control，寓意尺规作图）系列包含几个风格不同的字族。
 - `titl` 基本已是按titling-caps设计。
 - `unic` Unicase，“大型小写”、“大小写不分”体。
 
+## Poop
+![为𠷡镀金，画蛇添足](https://user-images.githubusercontent.com/58043328/227654992-f7a817bb-8ae5-4762-896c-8a40738fb3b6.gif)
+
+**[噗叽体](https://github.com/MY1L/FontGame#噗叽--poop)**。这是个字重可变宽体圆体，下载不在这儿，请点前方链接。\
+之所以没取名“尺规噗叽”，是因为这个中文字体缺“尺规”二字，很💩。
+
+视频预览：[｢为𠷡镀金，画蛇添足｣ 开源免费，可变字体“噗叽｜Poop”发布\_哔哩哔哩](https://www.bilibili.com/video/BV1QY4y1U7bd/)
+
 ## Runr
 ![Runr.png](res/Runr.png)
 
@@ -88,13 +101,13 @@ Ctrl（control，寓意尺规作图）系列包含几个风格不同的字族。
 - 2021-8-28：**包含全部108个奇尔斯×双重编码**及相关的结合变音标记（[2001版](https://www.evertype.com/standards/iso10646/pdf/cirth.pdf)）
 - 2021-8-31：**包含全部89个卢恩**及调整了所有字符的度量和`kern`，添加奇尔斯zwj连字`𖀞‍𖀞`，测试支持`mark`特性。至此基本完成。
 
-> 注※：`U+200D ZERO WIDTH JOINER`简称ZWJ，是个零宽隐形的字符，用于指示其前后2个字符应当连字（需字体作相应支持），由于宽度为〇难以选中复制，为方便起见，上文凡写明“zwj连字”的2个字符中间都已经夹了个ZWJ。
+> 注※：`U+200D ZERO WIDTH JOINER`简称ZWJ，是个零宽隐形的字符，用于指示其前后2个字符应当连字（需字体作相应支持），由于宽度为〇难以选中复制，为方便起见，上文凡写明“zwj连字”的2个字符中间都已经夹了个ZWJ。\
 你可以试试在某些软件中将字体设为[Ctrl Ctrl](#ctrl)来显示它。
 
 ## Seal
 **尺规说文**。说文部首（王福庵风格）小篆黑体，或含[Monu Hani]的原创部分。
 
-未来计划：做成字重可变。已有实例。
+未来计划：做成字重可变。[已有实例。](https://twitter.com/MY1Ltype/status/1637031145476100098)
 
 ## Tang
 **尺规西夏**。名称取自[ISO 15924]里西夏(Tangut)的四字代码。
