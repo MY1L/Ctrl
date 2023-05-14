@@ -18,6 +18,7 @@
 |MS|Microsoft Corp.|
 |MT[^MT]|Monotype Imaging|
 |REAL|Underware|
+|Stor|[Storm Type Foundry](https://www.stormtype.com/)|
 |URW |(URW)++|
 |*My*|我（綿飴）编的|
 |*Aa*|[AllAcronyms.com](https://www.allacronyms.com/)|
@@ -36,15 +37,15 @@ PostScript全名的通常缀序是：字重、字宽、倾斜、视觉尺寸。
 |字重|1字简写|2字简写|3字简写|4字简写|说明|
 | -: | - | - | - | - | - |
 |Thin|-|Th (ADBE,LINO,DAMA)|Thn *(Aa)*|*Thin*|超细,100|
-|Ultra *Light*|-|Ul *(My,Aa)*|Ult*Lt* (ADBE,LINO)|-|极细, 200,W1|
-|Extra *Light*|E*L* (ADBE)|-|Ext*Lt* (IBM)|-|纤细, 200,W2|
+|Ultra *Light*|-|Ul *(My,Aa)*|Ult*Lt* (ADBE,LINO)|-|极细,200,W1|
+|Extra *Light*|E*L* (ADBE)|-|Ext*Lt* (IBM)|-|纤细,200,W2|
 |Light|L (ADBE,DAMA,MS)|Lt (ADBE,IBM,LINO)|Lig (URW)|Ligh (URW)|细体,300,W3|
 |SemiLight|S (MS)|Sl (MS)|-|-|半细,350,W4|
 |Regular/Roman|R (ADBE,DAMA,MS)|Ra *(My)*	/	Rg(ADBE)|Reg/Rom (URW)|Regu/Roma[^Ro] (URW)|常规,400[^Nl]|
-|Medium|M (ADBE,DAMA,MS)|Md (ADBE,LINO)|Med (URW)|Medm (IBM)	/	Medi(URW)|中等, 500,W5|
-|DemiBold|D (ADBE)|Db *(My)*	/	Sb[^Sm] (MS)|Dem (URW)|Demi/~Book~[^Bk] (URW)|半粗, 600,W6|
+|Medium|M (ADBE,DAMA,MS)|Md (ADBE,LINO)|Med (URW,Stor)|Medm (IBM)	/	Medi(URW)|中等,500,W5|
+|DemiBold|D (ADBE)|Db *(My)*	/	Sb[^Sm] (MS)|Dem (URW)|Demi/~Book~[^Bk] (URW)|半粗,600,W6|
 |Bold|B (ADBE,DAMA,MS)|Bd (ADBE,BITS,LINO,MS,MT)|Bld (IBM)	/	Bol(URW)|*Bold*|粗体,700,W7|
-|Extra Bold|-|Xb *(My)*|XBd (ADBE?)|ExBd (MT)|大粗, 800,W8|
+|Extra Bold|-|Xb *(My)*|XBd (ADBE?)|ExBd (MT)|大粗,800,W8|
 |Heavy|H (ADBE)|Hv (ADBE,LINO)|Hvy *(Aa)*|-|特粗,900|
 |Black|K *(My)*|Bl (MS)|Blk (ADBE,LINO,MS)|-|超粗/黑,900|
 |Extra *Black*|X*Blk* (ADBE,LINO)|Xk *(My)*|-|-|特黑,950|
@@ -102,16 +103,18 @@ Normal和Medium[^Nl]的usWidthClass = 5
 |Book|-|Bk (ADBE)|Boo (URW)|*Book*|宜读[^Bk]|
 |Code|-|Cd *(Aa)*|Cod *(Aa)*|*Code*|代码/编程体[^Mo]|
 |Demi~|-|Dm (ADBE)|-|*Demi*|半~,=Semi|
+|Extra~|E/X (ADBE)|Ex (MT,Stor)|Ext (IBM,Stor)|Xtra *(Aa)*|特~|
 |Inclined|-|Ic (ADBE)|-|-|斜体?|
 |Italic|I (DAMA,MS)|It (ADBE,BITS,LINO,MS)|Ita (H&FJ,URW)|Ital (URW)|意大利体[^It]|
 |Kursiv|-|Ks (ADBE)|-|-|Italic(德语)|
 |Nord|-|Nd (ADBE)|-|~|宽又粗[^Nd]|
 |Oblique|O (LINO)|-|Obl (ADBE,LINO)|Obli (URW)|倾斜体|
+|Ornaments|-|-|-| [Orna](https://github.com/MY1L/Unicode/tree/main/abbr) *(My)*|花饰符(Stor)|
 |Outline|-|Ou (LINO)|-|-|轮廓/空心体|
 |Poster|-|Po (ADBE)|-|-|海报?|
 |Rounded|-|-|Rnd (H&FJ)|[Rond](https://github.com/MY1L/Sulfurme/releases/tag/SulfRond) *(My)*|圆体|
 |Sans|-|-|San (URW)|*Sans*|无衬线|
-|Semi~|-|Sm (ADBE,IBM)|-|*Semi* [^Sm]|半~,=Demi|
+|Semi~|-|Sm (ADBE,IBM,Stor)|Sem (Stor)|*Semi* [^Sm]|半~,=Demi|
 |Serif|-|Se (BITS)|-|-|有衬线|
 |Shadow|-|-|-|Shdw *(Aa)*|空心投影|
 |Slanted|-|Sl (ADBE)|-|-|倾斜体?|
@@ -131,11 +134,11 @@ Normal和Medium[^Nl]的usWidthClass = 5
 |尺寸|2字简写|适用字号|说明|
 | -: | - | - | - |
 |Display|Ds (ADBE)|>24(ADBE)	/	≥20(APPL)|标题/美术字：粗细对比强、字距紧、细节更多、x字高[^x]更小|
-|Subhead|Sh *(My)*|14~24(ADBE)|副标题：介乎 Display 和 Text|
+|Subhead|Sh *(My)*|14~24(ADBE)|副标题：介乎 Display 和 Text|
 |Text|-|9~14(ADBE)	/	<20(APPL)|正文|
-|Small(*Text*)|St *(My)*|-|小字：介乎 Text 和 Caption ?|
+|Small(*Text*)|St *(My)*|-|小字：介乎 Text 和 Caption ?|
 |Caption|-|6~8(ADBE)|注脚：粗细对比弱、字距松、字形略宽|
-|Opticals|Op *(Aa)*|-|视觉尺寸可变? Adobe后缀|
+|Opticals|Op *(Aa)*|∞|视觉尺寸可变？Adobe后缀|
 
 #### 其它
 目前皆微软特色。
