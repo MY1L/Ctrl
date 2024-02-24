@@ -17,11 +17,12 @@
 |LINO|Linotype|
 |MS|Microsoft Corp.|
 |MT[^MT]|Monotype Imaging|
+|[PfEd](https://fontforge.org/docs/techref/non-standard.html#pfed-the-fontforge-extensions-table "FontForge")|([Libertine](http://www.linuxlibertine.org "Philipp H. Poll"))|
 |REAL|Underware|
-|Stor|[Storm Type Foundry](https://www.stormtype.com/)|
+|Stor|[Storm Type Foundry](https://www.stormtype.com)|
 |URW |(URW)++|
 |*My*|我（綿飴）编的|
-|*Aa*|[AllAcronyms.com](https://www.allacronyms.com/)|
+|*Aa*|[AllAcronyms.com](https://www.allacronyms.com)|
 
 某些字体软件会自带一个厂商列表（如[NexusFont](https://github.com/MY1L/Chinese)带有`vendors.list`文件，收录388个厂）但总有新厂商出现，还有些厂商[^MT]会改ID或注册多个ID，所以列举不完的。[这儿有微软登记的不完全列表](https://learn.microsoft.com/zh-cn/typography/vendors/#n)，注意其中有些并非厂商，也有某些ID虽有字体使用但因微软不接受而未列出。\
 顺带，我字体的ID一般是`MYIL`（如有`MY1L`那也是我），可见于前文微软列表。
@@ -75,7 +76,7 @@ PostScript全名的通常缀序是：字重、字宽、倾斜、视觉尺寸。
 |Condensed|C (DAMA)|Cn (ADBE,LINO,MT)|Con (URW)|Cond (ADBE,MT,URW)|窄,CSS属性[^Cn]用值|
 |Normal|N *([Aa])*|Nl *([Aa])*|Nml *([Aa])*|Norm *([Aa])*|标准[^Nl]|
 |Extended|-|Ex (ADBE,LINO)|Ext (ADBE)|Extd *(Aa)*|宽,CSS[^Cn]用的`expanded`|
-|Mono|-|Mo (BITS)|Mon (URW)|*Mono*|等宽[^Mo]|
+|Mono|M (PfEd)|Mo (BITS)|Mon (URW)|*Mono*|等宽[^Mo]|
 |Narrow|-|Nr (ADBE)|Nrw *(Aa)*|Nrrw *(My)*|稍窄,CSS[^Cn]用的`narrower`|
 |Wide|W *(Aa)*|Wd *(Aa)*|-|*Wide*|更宽/扁? CSS[^Cn]用的`wider`|
 
@@ -99,26 +100,29 @@ Normal和Medium[^Nl]的usWidthClass = 5
 |样式|1字简写|2字简写|3字简写|4字简写|说明|
 | -: | - | - | - | - | - |
 |Backslant|-|Bs *(My)*|-|-|前倾(斜)体|
-|Bold Italic/Oblique|Z (MS)|BI (BITS,MS)|-|-|粗斜体|
+|Bold Italic / Bold Oblique|Z (MS)|BI (BITS,MS)|-|-|粗斜体|
 |Book|-|Bk (ADBE)|Boo (URW)|*Book*|宜读[^Bk]|
 |Code|-|Cd *(Aa)*|Cod *(Aa)*|*Code*|代码/编程体[^Mo]|
+|Console|-|-|Con (MS)|-|控制台(=Code)|
 |Demi~|-|Dm (ADBE)|-|*Demi*|半~,=Semi|
 |Extra~|E/X (ADBE)|Ex (MT,Stor)|Ext (IBM,Stor)|Xtra *(Aa)*|特~|
 |Inclined|-|Ic (ADBE)|-|-|斜体?|
+|Initials|I (PfEd)|-|-|-|首字符|
 |Italic|I (DAMA,MS)|It (ADBE,BITS,LINO,MS)|Ita (H&FJ,URW)|Ital (URW)|意大利体[^It]|
+|Keyboard|K (PfEd)|-|-|-|按键符|
 |Kursiv|-|Ks (ADBE)|-|-|Italic(德语)|
 |Nord|-|Nd (ADBE)|-|~|宽又粗[^Nd]|
 |Oblique|O (LINO)|-|Obl (ADBE,LINO)|Obli (URW)|倾斜体|
 |Ornaments|-|-|-| [Orna](https://github.com/MY1L/Unicode/tree/main/abbr) *(My)*|花饰符(Stor)|
-|Outline|-|Ou (LINO)|-|-|轮廓/空心体|
+|Outline|U (PfEd)|Ou (LINO)|-|-|轮廓/空心体|
 |Poster|-|Po (ADBE)|-|-|海报?|
 |Rounded|-|-|Rnd (H&FJ)|[Rond](https://github.com/MY1L/Sulfurme/releases/tag/SulfRond) *(My)*|圆体|
 |Sans|-|-|San (URW)|*Sans*|无衬线|
 |Semi~|-|Sm (ADBE,IBM,Stor)|Sem (Stor)|*Semi* [^Sm]|半~,=Demi|
-|Serif|-|Se (BITS)|-|-|有衬线|
-|Shadow|-|-|-|Shdw *(Aa)*|空心投影|
-|Slanted|-|Sl (ADBE)|-|-|倾斜体?|
-|SmallCapitals|-|SC (URW)|-|SmCp (REAL)|小型大写体|
+|Serif|-|Se (BITS)|-|-|(有)衬线|
+|Shadow|W (PfEd)|-|-|Shdw *(Aa)*|空心投影体|
+|Slanted|L (PfEd)|Sl (ADBE)|-|-|倾斜体|
+|SmallCapitals / Small Caps<br> / Capitals|S (PfEd)|SC (URW)|-|SmCp (REAL)|小型大写体|
 |Super|-|Su (ADBE)|-|-|超?|
 |Upright *Italic*|-|Up (ADBE)|-|-|直立写意体[^It]|
 |Variable( Font)|-|VF ([MS等业界约定](https://learn.microsoft.com/zh-cn/typography/opentype/spec/recom#filenames))|-|-|可变(字体)|
@@ -141,7 +145,9 @@ Normal和Medium[^Nl]的usWidthClass = 5
 |Opticals|Op *(Aa)*|∞|视觉尺寸可变？Adobe后缀|
 
 #### 其它
-目前皆微软特色。
+`Slim`的含义不固定，[Noto指轻量版](https://notofonts.github.io/)，[魏安可能指矮行距](https://www.babelstone.co.uk/Fonts/Tibetan.html#Download)。
+
+以下皆微软特色。
 
 |名称|简写|
 | -: | - |
@@ -182,7 +188,7 @@ Normal和Medium[^Nl]的usWidthClass = 5
 [^Bk]: “Book”表示造字者认为该字重最宜阅读，可能比常规粗也可能比常规细，只是URW恰好有某字体相当于Demi🤔
 [^Cn]: CSS3 [font-stretch](https://www.w3.org/TR/css-fonts-3/#propdef-font-stretch) 属性可调整字宽。
 [^It]: 我想译作“写意体”，略作“写体”，与“斜体”谐音。可见[HanItalic](https://github.com/MY1L/HanItalic)
-[^Mo]: 等宽（[Monospace](https://www.w3.org/TR/css-fonts-3/#monospace)，反义词为“比例”Proportional）的不一定是打字机风（Typewriter）字体，也不一定是编程（Code）字体。同时[编程字体也可能不等宽](https://input.djr.com/)
+[^Mo]: 等宽（[Monospace](https://www.w3.org/TR/css-fonts-3/#monospace)，反义词为“比例”Proportional）的不一定是打字机风（Typewriter）字体，也不一定是编程（Code）或终端（[Terminal](https://www.unicode.org/L2/L2023/23107-terminal-suppt.pdf "L2/23-107")）字体。同时[编程字体也可能不等宽](https://input.djr.com/)
 [^MT]: Monotype Imaging曾用`AGFA`、`MT`，现在ID是`MONO`，只是为免表格过长选最短的。
 [^Nd]: 1960年 Roger Excoffon 的 Antique Olive 字族最初版里的样式：大字宽、粗字重。只因Adobe字库中有这款的数字版，ADBE就把它列入缩写建议表了。这或是它唯一一次出现。
 [^Ro]: URW命名比较混乱，例如其字体 Nimbus 的“Roman”实际是罗马风衬线的意思。
